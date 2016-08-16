@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404477BE1D62BD040088DF72 /* RandomWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404477BD1D62BD040088DF72 /* RandomWordsViewController.swift */; };
 		4049E7301D62682600B7DD77 /* RandomNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */; };
 		4049E7321D62683C00B7DD77 /* RandomDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E7311D62683C00B7DD77 /* RandomDiceViewController.swift */; };
 		40AEFB341D6258370056476C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEFB331D6258370056476C /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		404477BD1D62BD040088DF72 /* RandomWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordsViewController.swift; sourceTree = "<group>"; };
 		4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberViewController.swift; sourceTree = "<group>"; };
 		4049E7311D62683C00B7DD77 /* RandomDiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomDiceViewController.swift; sourceTree = "<group>"; };
 		40AEFB301D6258370056476C /* Betting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Betting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +44,7 @@
 			children = (
 				4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */,
 				4049E7311D62683C00B7DD77 /* RandomDiceViewController.swift */,
+				404477BD1D62BD040088DF72 /* RandomWordsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4049E7301D62682600B7DD77 /* RandomNumberViewController.swift in Sources */,
+				404477BE1D62BD040088DF72 /* RandomWordsViewController.swift in Sources */,
 				4049E7321D62683C00B7DD77 /* RandomDiceViewController.swift in Sources */,
 				40AEFB341D6258370056476C /* AppDelegate.swift in Sources */,
 			);
