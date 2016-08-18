@@ -11,7 +11,8 @@ import UIKit
 class RandomHeadsOrTailsViewController: UIViewController {
     
     
-    @IBOutlet weak var bgImage: UIImageView!
+
+    @IBOutlet weak var coinImage: UIImageView!
 
     var vWords: [String] = ["baby","happy"]
     var index = 0
@@ -29,15 +30,18 @@ class RandomHeadsOrTailsViewController: UIViewController {
 
     @IBAction func resultButton(sender: AnyObject) {
         
+
+        
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto =  vWords[index]
         
         switch descriptionPhoto {
         case "baby":
-            bgImage.image=UIImage(named: "baby")
+            coinImage.image=UIImage(named: "baby")
         default:
-            bgImage.image=UIImage(named: "happy")
+            coinImage.image=UIImage(named: "happy")
         }
+
         
     }
     
