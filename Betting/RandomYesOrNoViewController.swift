@@ -1,21 +1,20 @@
 //
-//  RandomWordsViewController.swift
+//  RandomYesOrNoViewController.swift
 //  Betting
 //
-//  Created by Wellington Bezerra on 16/08/16.
+//  Created by Wellington Bezerra on 17/08/16.
 //  Copyright © 2016 Wellington Bezerra. All rights reserved.
 //
 
 import UIKit
 
-class RandomWordsViewController: UIViewController {
-
-    @IBOutlet weak var newWordLabel: UITextField!
-    @IBOutlet weak var randomWordLabel: UILabel!
+class RandomYesOrNoViewController: UIViewController {
     
-    var vWords: [String] = []
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    var vWords: [String] = ["SIM","NÃO"]
     var index = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,20 +25,10 @@ class RandomWordsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func registerButton(sender: AnyObject) {
-        vWords.append(newWordLabel.text!)
-        newWordLabel.text = ""
-    }
 
     @IBAction func randomButton(sender: AnyObject) {
         index = randomNumber(0...vWords.count-1)
-        randomWordLabel.text = vWords[index]
-    }
-    
-    @IBAction func cleanButton(sender: AnyObject) {
-        vWords.removeAll()
-        randomWordLabel.text = ""
+        resultLabel.text = vWords[index]
     }
     
     func randomNumber(range: Range<Int> = 1...6) -> Int {
@@ -47,5 +36,4 @@ class RandomWordsViewController: UIViewController {
         let max = range.endIndex
         return Int(arc4random_uniform(UInt32(max - min))) + min
     }
-    
 }

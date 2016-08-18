@@ -14,6 +14,7 @@
 		40AEFB391D6258370056476C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AEFB371D6258370056476C /* Main.storyboard */; };
 		40AEFB3B1D6258370056476C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40AEFB3A1D6258370056476C /* Assets.xcassets */; };
 		40AEFB3E1D6258370056476C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AEFB3C1D6258370056476C /* LaunchScreen.storyboard */; };
+		40DF05A41D654AD50059D6DC /* RandomYesOrNoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		40AEFB3A1D6258370056476C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40AEFB3D1D6258370056476C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40AEFB3F1D6258370056476C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomYesOrNoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 				4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */,
 				4049E7311D62683C00B7DD77 /* RandomDiceViewController.swift */,
 				404477BD1D62BD040088DF72 /* RandomWordsViewController.swift */,
+				40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				404477BE1D62BD040088DF72 /* RandomWordsViewController.swift in Sources */,
 				4049E7321D62683C00B7DD77 /* RandomDiceViewController.swift in Sources */,
 				40AEFB341D6258370056476C /* AppDelegate.swift in Sources */,
+				40DF05A41D654AD50059D6DC /* RandomYesOrNoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
