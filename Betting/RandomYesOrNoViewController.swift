@@ -31,9 +31,4 @@ class RandomYesOrNoViewController: UIViewController {
         resultLabel.text = vWords[index]
     }
     
-    func randomNumber(range: Range<Int> = 1...6) -> Int {
-        let min = range.startIndex
-        let max = range.endIndex
-        return Int(arc4random_uniform(UInt32(max - min))) + min
-    }
 }
