@@ -17,6 +17,12 @@
 		40DF05A41D654AD50059D6DC /* RandomYesOrNoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */; };
 		40DF05A61D65523C0059D6DC /* RandomHeadsOrTailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF05A51D65523C0059D6DC /* RandomHeadsOrTailsViewController.swift */; };
 		40DF05AA1D6558CD0059D6DC /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF05A91D6558CD0059D6DC /* Random.swift */; };
+		CE3E332B1D67578000DD258A /* RandomLettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E332A1D67578000DD258A /* RandomLettersViewController.swift */; };
+		CE3E332D1D67579D00DD258A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E332C1D67579D00DD258A /* MenuViewController.swift */; };
+		CE3E33331D675A2800DD258A /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E332F1D6759A700DD258A /* GothamRnd-Bold.otf */; };
+		CE3E33341D675A2800DD258A /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E33301D6759A700DD258A /* GothamRnd-Book.otf */; };
+		CE3E33351D675A2800DD258A /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E33311D6759A700DD258A /* GothamRnd-Light.otf */; };
+		CE3E33361D675A2800DD258A /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E33321D6759A700DD258A /* GothamRnd-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomYesOrNoViewController.swift; sourceTree = "<group>"; };
 		40DF05A51D65523C0059D6DC /* RandomHeadsOrTailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomHeadsOrTailsViewController.swift; sourceTree = "<group>"; };
 		40DF05A91D6558CD0059D6DC /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		CE3E332A1D67578000DD258A /* RandomLettersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomLettersViewController.swift; sourceTree = "<group>"; };
+		CE3E332C1D67579D00DD258A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CE3E332F1D6759A700DD258A /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
+		CE3E33301D6759A700DD258A /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		CE3E33311D6759A700DD258A /* GothamRnd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Light.otf"; sourceTree = "<group>"; };
+		CE3E33321D6759A700DD258A /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 				40DF05A31D654AD50059D6DC /* RandomYesOrNoViewController.swift */,
 				40DF05A51D65523C0059D6DC /* RandomHeadsOrTailsViewController.swift */,
 				40DF05A91D6558CD0059D6DC /* Random.swift */,
+				CE3E332A1D67578000DD258A /* RandomLettersViewController.swift */,
+				CE3E332C1D67579D00DD258A /* MenuViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -96,11 +110,23 @@
 		40AEFB321D6258370056476C /* Betting */ = {
 			isa = PBXGroup;
 			children = (
+				CE3E332E1D67595F00DD258A /* Resources */,
 				4049E7361D626ED000B7DD77 /* Model */,
 				4049E7351D626EC700B7DD77 /* View */,
 				4049E7341D626EBE00B7DD77 /* Controller */,
 			);
 			path = Betting;
+			sourceTree = "<group>";
+		};
+		CE3E332E1D67595F00DD258A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E332F1D6759A700DD258A /* GothamRnd-Bold.otf */,
+				CE3E33301D6759A700DD258A /* GothamRnd-Book.otf */,
+				CE3E33311D6759A700DD258A /* GothamRnd-Light.otf */,
+				CE3E33321D6759A700DD258A /* GothamRnd-Medium.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3E33331D675A2800DD258A /* GothamRnd-Bold.otf in Resources */,
+				CE3E33341D675A2800DD258A /* GothamRnd-Book.otf in Resources */,
+				CE3E33351D675A2800DD258A /* GothamRnd-Light.otf in Resources */,
+				CE3E33361D675A2800DD258A /* GothamRnd-Medium.otf in Resources */,
 				40AEFB3E1D6258370056476C /* LaunchScreen.storyboard in Resources */,
 				40AEFB3B1D6258370056476C /* Assets.xcassets in Resources */,
 				40AEFB391D6258370056476C /* Main.storyboard in Resources */,
@@ -178,7 +208,9 @@
 				4049E7301D62682600B7DD77 /* RandomNumberViewController.swift in Sources */,
 				404477BE1D62BD040088DF72 /* RandomWordsViewController.swift in Sources */,
 				4049E7321D62683C00B7DD77 /* RandomDiceViewController.swift in Sources */,
+				CE3E332D1D67579D00DD258A /* MenuViewController.swift in Sources */,
 				40AEFB341D6258370056476C /* AppDelegate.swift in Sources */,
+				CE3E332B1D67578000DD258A /* RandomLettersViewController.swift in Sources */,
 				40DF05A41D654AD50059D6DC /* RandomYesOrNoViewController.swift in Sources */,
 				40DF05AA1D6558CD0059D6DC /* Random.swift in Sources */,
 			);

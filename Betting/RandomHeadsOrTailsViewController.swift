@@ -10,6 +10,8 @@ import UIKit
 
 class RandomHeadsOrTailsViewController: UIViewController {
     
+    override func prefersStatusBarHidden() -> Bool { return true }
+    
     
 
     @IBOutlet weak var coinImage: UIImageView!

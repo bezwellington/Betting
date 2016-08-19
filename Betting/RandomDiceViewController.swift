@@ -10,6 +10,8 @@ import UIKit
 
 class RandomDiceViewController: UIViewController {
     
+    override func prefersStatusBarHidden() -> Bool { return true }
+    
     @IBOutlet weak var diceImage: UIImageView!
     
     var vWords: [String] = ["1","2","3","4","5","6"]

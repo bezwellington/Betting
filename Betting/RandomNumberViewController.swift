@@ -10,6 +10,8 @@ import UIKit
 
 class RandomNumberViewController: UIViewController {
     
+    override func prefersStatusBarHidden() -> Bool { return true }
+    
     @IBOutlet weak var startNumberLabel: UITextField!
     @IBOutlet weak var endNumberLabel: UITextField!
     @IBOutlet weak var resultLabel: UILabel!

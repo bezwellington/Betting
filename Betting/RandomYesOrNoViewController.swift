@@ -10,6 +10,8 @@ import UIKit
 
 class RandomYesOrNoViewController: UIViewController {
     
+    override func prefersStatusBarHidden() -> Bool { return true }
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     var vWords: [String] = ["SIM","NÃO"]
