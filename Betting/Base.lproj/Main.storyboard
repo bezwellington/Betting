@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GothamRnd-Medium.otf">
+            <string>GothamRounded-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Random Number View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -333,15 +338,44 @@
                         <viewControllerLayoutGuide type="bottom" id="YVF-Ju-gJd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4qC-Cv-q9B">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2">
+                                <rect key="frame" x="0.0" y="0.0" width="188" height="222"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
+                                <state key="normal" backgroundImage="number">
+                                    <string key="title">Random
+Number</string>
+                                    <color key="titleColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH">
+                                <rect key="frame" x="187" y="0.0" width="188" height="222"/>
+                                <state key="normal" backgroundImage="yesno">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">Yes
+or
+No</string>
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineSpacing="2.25" paragraphSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0un-sr-O1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="-471"/>
+            <point key="canvasLocation" x="2500.5" y="-494.5"/>
         </scene>
         <!--Random Heads Or Tails View Controller-->
         <scene sceneID="DRU-XL-47u">
@@ -486,4 +520,8 @@
             <point key="canvasLocation" x="3719" y="314"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="number" width="188" height="222"/>
+        <image name="yesno" width="187" height="222"/>
+    </resources>
 </document>
