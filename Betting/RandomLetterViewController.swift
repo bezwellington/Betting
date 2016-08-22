@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomLettersViewController: UIViewController {
+class RandomLetterViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
 

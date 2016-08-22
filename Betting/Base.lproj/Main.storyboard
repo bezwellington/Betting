@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -19,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-vU-5dd">
@@ -121,6 +122,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="endNumberLabel" destination="T3m-vU-5dd" id="Nj1-OO-0Lh"/>
                         <outlet property="resultLabel" destination="cUc-TX-NdR" id="37J-8N-vHf"/>
@@ -129,18 +131,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="314"/>
+            <point key="canvasLocation" x="2241.5" y="-1291.5"/>
         </scene>
-        <!--Random Words View Controller-->
+        <!--Random Word View Controller-->
         <scene sceneID="MIy-f6-fVP">
             <objects>
-                <viewController id="Bn1-Gq-Yn0" customClass="RandomWordsViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bn1-Gq-Yn0" customClass="RandomWordViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1SN-bn-wO2"/>
                         <viewControllerLayoutGuide type="bottom" id="4YE-dq-qoe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dzU-ll-3ga">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insira a nova palavra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-XG-JuC">
@@ -233,6 +235,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="newWordLabel" destination="n9C-fQ-dzc" id="aS3-id-Ww8"/>
                         <outlet property="randomWordLabel" destination="gId-nd-X3k" id="a4c-Yq-wim"/>
@@ -240,18 +243,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSk-of-oXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="314"/>
+            <point key="canvasLocation" x="2241.5" y="347.5"/>
         </scene>
-        <!--Random Yes Or No View Controller-->
+        <!--Yes Or No View Controller-->
         <scene sceneID="IJb-MF-tHW">
             <objects>
-                <viewController id="TQ9-qh-38u" customClass="RandomYesOrNoViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TQ9-qh-38u" customClass="YesOrNoViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oa4-8R-LkP"/>
                         <viewControllerLayoutGuide type="bottom" id="O58-sb-0o0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dyv-wo-u5p">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça a sua pergunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-HL-CI3">
@@ -321,13 +324,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="resultLabel" destination="ZLC-yO-wlC" id="n5F-z0-xge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EB0-u2-tnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="314"/>
+            <point key="canvasLocation" x="2755.5" y="-1291.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="Bef-kq-v6z">
@@ -344,49 +348,71 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="222"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
-                                <state key="normal" backgroundImage="number">
-                                    <string key="title">Random
-Number</string>
+                                <state key="normal" backgroundImage="randomnumber">
                                     <color key="titleColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Dhg-tS-Djl"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH">
                                 <rect key="frame" x="187" y="0.0" width="188" height="222"/>
-                                <state key="normal" backgroundImage="yesno">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">Yes
-or
-No</string>
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" lineSpacing="2.25" paragraphSpacing="10" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
+                                <state key="normal" backgroundImage="yesorno">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TQ9-qh-38u" kind="show" id="V6v-vW-gnL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-oB-8LM" userLabel="Random Letter">
+                                <rect key="frame" x="0.0" y="222" width="188" height="222"/>
+                                <state key="normal" backgroundImage="randomletter"/>
+                                <connections>
+                                    <segue destination="k66-8y-Xop" kind="show" id="B6i-7V-BNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-OH-iax" userLabel="Heads or Tails">
+                                <rect key="frame" x="187" y="222" width="188" height="222"/>
+                                <state key="normal" backgroundImage="headsortails"/>
+                                <connections>
+                                    <segue destination="yQM-1e-Xjn" kind="show" id="Vu6-Eq-GWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-HS-q0t" userLabel="Random Word">
+                                <rect key="frame" x="0.0" y="444" width="188" height="223"/>
+                                <state key="normal" backgroundImage="randomword"/>
+                                <connections>
+                                    <segue destination="Bn1-Gq-Yn0" kind="show" id="Mds-bd-Gpt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-Z6-f9L" userLabel="Roll a Dice">
+                                <rect key="frame" x="187" y="444" width="188" height="223"/>
+                                <state key="normal" backgroundImage="rolladice"/>
+                                <connections>
+                                    <segue destination="Vhe-fQ-4AM" kind="show" id="RQ3-Ch-0DV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0un-sr-O1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2500.5" y="-494.5"/>
         </scene>
-        <!--Random Heads Or Tails View Controller-->
+        <!--Heads Or Tails View Controller-->
         <scene sceneID="DRU-XL-47u">
             <objects>
-                <viewController id="yQM-1e-Xjn" customClass="RandomHeadsOrTailsViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yQM-1e-Xjn" customClass="HeadsOrTailsViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0zV-YK-9uG"/>
                         <viewControllerLayoutGuide type="bottom" id="DJy-7b-dfa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OcG-ch-bcn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cara ou Coroa?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdy-Et-Rt1">
@@ -431,24 +457,25 @@ No</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="coinImage" destination="4cS-e7-qpp" id="Tfc-sE-WpO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLq-TI-dg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335.5" y="314"/>
+            <point key="canvasLocation" x="3136.5" y="-494.5"/>
         </scene>
-        <!--Random Dice View Controller-->
+        <!--RollA Dice View Controller-->
         <scene sceneID="SzD-Uq-Kfy">
             <objects>
-                <viewController id="Vhe-fQ-4AM" customClass="RandomDiceViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vhe-fQ-4AM" customClass="RollADiceViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xMb-Dt-ODa"/>
                         <viewControllerLayoutGuide type="bottom" id="cne-3n-7a4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hfi-xT-Q0x">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual lado do DADO você escolhe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-ME-vEt">
@@ -493,35 +520,41 @@ No</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="diceImage" destination="dax-tU-kpN" id="Bnj-wB-2Zo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSL-Kg-qCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2995.5" y="314"/>
+            <point key="canvasLocation" x="2755.5" y="347.5"/>
         </scene>
-        <!--Random Letters View Controller-->
+        <!--Random Letter View Controller-->
         <scene sceneID="Jq6-zR-ziZ">
             <objects>
-                <viewController id="k66-8y-Xop" customClass="RandomLettersViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k66-8y-Xop" customClass="RandomLetterViewController" customModule="Betting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="75F-0m-Ujj"/>
                         <viewControllerLayoutGuide type="bottom" id="oSV-me-nLb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JSc-6N-tnb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLG-FA-7aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3719" y="314"/>
+            <point key="canvasLocation" x="1866.5" y="-494.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="number" width="188" height="222"/>
-        <image name="yesno" width="187" height="222"/>
+        <image name="headsortails" width="187" height="222"/>
+        <image name="randomletter" width="188" height="222"/>
+        <image name="randomnumber" width="188" height="222"/>
+        <image name="randomword" width="188" height="222"/>
+        <image name="rolladice" width="187" height="222"/>
+        <image name="yesorno" width="187" height="222"/>
     </resources>
 </document>

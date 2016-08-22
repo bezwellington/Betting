@@ -1,22 +1,20 @@
 //
-//  RandomHeadsOrTailsViewController.swift
+//  RandomDiceViewController.swift
 //  Betting
 //
-//  Created by Wellington Bezerra on 17/08/16.
+//  Created by Wellington Bezerra on 15/08/16.
 //  Copyright © 2016 Wellington Bezerra. All rights reserved.
 //
 
 import UIKit
 
-class RandomHeadsOrTailsViewController: UIViewController {
+class RollADiceViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    @IBOutlet weak var diceImage: UIImageView!
     
-
-    @IBOutlet weak var coinImage: UIImageView!
-
-    var vWords: [String] = ["baby","happy"]
+    var vWords: [String] = ["1","2","3","4","5","6"]
     var index = 0
     
     override func viewDidLoad() {
@@ -30,22 +28,25 @@ class RandomHeadsOrTailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func resultButton(sender: AnyObject) {
-        
-
+    @IBAction func randomButton(sender: AnyObject) {
         
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto =  vWords[index]
         
         switch descriptionPhoto {
-        case "baby":
-            coinImage.image=UIImage(named: "baby")
+        case "1":
+            diceImage.image=UIImage(named: "1")
+        case "2":
+            diceImage.image=UIImage(named: "2")
+        case "3":
+            diceImage.image=UIImage(named: "3")
+        case "4":
+            diceImage.image=UIImage(named: "4")
+        case "5":
+            diceImage.image=UIImage(named: "5")
         default:
-            coinImage.image=UIImage(named: "happy")
+            diceImage.image=UIImage(named: "6")
         }
-
         
     }
-    
-    
 }

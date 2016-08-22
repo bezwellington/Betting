@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
-    override func prefersStatusBarHidden() -> Bool { return true }
+    override func preferredStatusBarStyle() -> UIStatusBarStyle { return .LightContent }
 
     override func viewDidLoad() {
         super.viewDidLoad()
