@@ -11,6 +11,10 @@ import UIKit
 class RandomLetterViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
+    
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

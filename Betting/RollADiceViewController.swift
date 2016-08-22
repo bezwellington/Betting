@@ -12,6 +12,12 @@ class RollADiceViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
     @IBOutlet weak var diceImage: UIImageView!
     
     var vWords: [String] = ["1","2","3","4","5","6"]

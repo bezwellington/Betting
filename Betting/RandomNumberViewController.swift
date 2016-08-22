@@ -12,6 +12,10 @@ class RandomNumberViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBOutlet weak var startNumberLabel: UITextField!
     @IBOutlet weak var endNumberLabel: UITextField!
     @IBOutlet weak var resultLabel: UILabel!

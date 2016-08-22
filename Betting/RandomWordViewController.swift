@@ -11,6 +11,10 @@ import UIKit
 class RandomWordViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
+    
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     @IBOutlet weak var newWordLabel: UITextField!
     @IBOutlet weak var randomWordLabel: UILabel!
