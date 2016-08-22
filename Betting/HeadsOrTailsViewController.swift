@@ -12,11 +12,14 @@ class HeadsOrTailsViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
-
+    
     @IBOutlet weak var coinImage: UIImageView!
 
-    var vWords: [String] = ["baby","happy"]
+    var vWords: [String] = ["heads","tails"]
     var index = 0
     
     override func viewDidLoad() {
@@ -38,10 +41,10 @@ class HeadsOrTailsViewController: UIViewController {
         let descriptionPhoto =  vWords[index]
         
         switch descriptionPhoto {
-        case "baby":
-            coinImage.image=UIImage(named: "baby")
+        case "heads":
+            coinImage.image=UIImage(named: "heads")
         default:
-            coinImage.image=UIImage(named: "happy")
+            coinImage.image=UIImage(named: "tails")
         }
 
         
