@@ -12,28 +12,29 @@ class RollADiceViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
-    
     @IBOutlet weak var diceImage: UIImageView!
+    
     
     var vWords: [String] = ["1","2","3","4","5","6"]
     var index = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
     @IBAction func randomButton(sender: AnyObject) {
         
         index = randomNumber(0...vWords.count-1)
@@ -41,18 +42,25 @@ class RollADiceViewController: UIViewController {
         
         switch descriptionPhoto {
         case "1":
-            diceImage.image=UIImage(named: "1")
+            diceImage.image = UIImage(named: "one")
+            view.backgroundColor = UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0) //red
         case "2":
-            diceImage.image=UIImage(named: "2")
+            diceImage.image = UIImage(named: "two")
+            view.backgroundColor = UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0) //green
         case "3":
-            diceImage.image=UIImage(named: "3")
+            diceImage.image = UIImage(named: "three")
+            view.backgroundColor = UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0) //yellow
         case "4":
-            diceImage.image=UIImage(named: "4")
+            diceImage.image = UIImage(named: "four")
+            view.backgroundColor = UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0) //blue
         case "5":
-            diceImage.image=UIImage(named: "5")
+            diceImage.image = UIImage(named: "five")
+            view.backgroundColor = UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0) //pink
         default:
-            diceImage.image=UIImage(named: "6")
+            diceImage.image = UIImage(named: "six")
+            view.backgroundColor = UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0) //purple
         }
-        
     }
+    
+    
 }
