@@ -35,7 +35,7 @@ class RollADiceViewController: UIViewController {
     }
 
     
-    @IBAction func randomButton(sender: AnyObject) {
+    @IBAction func rollButton(sender: AnyObject) {
         
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto =  vWords[index]

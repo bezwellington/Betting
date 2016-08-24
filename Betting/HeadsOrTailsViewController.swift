@@ -35,7 +35,7 @@ class HeadsOrTailsViewController: UIViewController {
     }
     
 
-    @IBAction func resultButton(sender: AnyObject) {
+    @IBAction func flipButton(sender: AnyObject) {
 
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto = vWords[index]

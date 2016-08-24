@@ -12,33 +12,31 @@ class RandomNumberViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
+    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBOutlet weak var startNumberLabel: UITextField!
-    @IBOutlet weak var endNumberLabel: UITextField!
+    
+    @IBOutlet weak var startNumberField: UITextField!
+    @IBOutlet weak var endNumberField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
 
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startNumberField.text = "0"
+        endNumberField.text = "100"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func randomButton(sender: AnyObject) {
-            resultLabel.text = String(randomNumber(Int(startNumberLabel.text!)!...Int(endNumberLabel.text!)!))
+    
+    @IBAction func pushButton(sender: AnyObject) {
+            resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
     }
 
-    @IBAction func resetTextFields(sender: AnyObject) {
-        startNumberLabel.text = ""
-        endNumberLabel.text = ""
-        resultLabel.text = ""
-        
-    }
 }
