@@ -631,6 +631,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="firstField" destination="phd-B7-CbL" id="XrY-wC-eGM"/>
+                        <outlet property="lastField" destination="GNX-t3-w9g" id="IGb-i4-j26"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLG-FA-7aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
