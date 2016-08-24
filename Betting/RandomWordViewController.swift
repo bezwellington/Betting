@@ -35,12 +35,17 @@ class RandomWordViewController: UIViewController {
     
     @IBAction func registerButton(sender: AnyObject) {
         vWords.append(newWordLabel.text!)
+        print(newWordLabel.text!)
         newWordLabel.text = ""
     }
 
     @IBAction func randomButton(sender: AnyObject) {
+        if (vWords.count > 1) {
         index = randomNumber(0...vWords.count-1)
+        print (vWords[index])
         randomWordLabel.text = vWords[index]
+        }
+        
     }
     
     @IBAction func cleanButton(sender: AnyObject) {
