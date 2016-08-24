@@ -10,9 +10,11 @@ import UIKit
 
 class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var firstField: UITextField!
     @IBOutlet weak var lastField: UITextField!
-    let limitLength = 1
+    var firstLett: Int = 0
+    var lastLett: Int = 0
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
@@ -20,6 +22,43 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func randomButton(sender: AnyObject) {
+        self.view.endEditing(true)
+        
+        if let error = checkTextFieldError() {
+            let alert = UIAlertController(title: "Error!", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            print("Sort Letter")
+            //let range = lastLett - firstLett
+            let asciiCode = randomNumber(firstLett...lastLett)
+            var str = ""
+            str.append(Character(UnicodeScalar(asciiCode)))
+            resultLabel.text = str
+        }
+
+    }
+    
+    func checkTextFieldError() -> String? {
+        //converte o caractere para padrao unicode
+        firstLett = (firstField.text?.characters.first?.unicodeScalarCodePoint())!
+        lastLett = (lastField.text?.characters.first?.unicodeScalarCodePoint())!
+        
+        //intervalo do alfabeto maiusculo na tabela ASCII
+        let range: Range<Int> = 65...90
+        
+        //retorna erro de caractere que não é letra maiuscula
+        if !(range.contains(firstLett) && range.contains(lastLett)){
+            return "Please insert only letters."
+        }
+        //retorna erro de ordem errada de letras
+        else if (firstLett > lastLett) {
+            return "Please insert in alphabetical order"
+        }
+        
+        return nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +66,15 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         lastField.delegate = self
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
+    func textFieldDidEndEditing(textField: UITextField) {
+         textField.text = textField.text?.uppercaseString
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
+        textField.text = textField.text?.uppercaseString
         let newLength = text.characters.count + string.characters.count - range.length
-        return newLength <= limitLength
+        return newLength <= 1
     }
 
     override func didReceiveMemoryWarning() {

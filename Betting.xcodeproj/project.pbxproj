@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E48A6851D6E331D00296D4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E48A6841D6E331D00296D4E /* Extensions.swift */; };
 		404477BE1D62BD040088DF72 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404477BD1D62BD040088DF72 /* RandomWordViewController.swift */; };
 		4049E7301D62682600B7DD77 /* RandomNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */; };
 		4049E7321D62683C00B7DD77 /* RollADiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E7311D62683C00B7DD77 /* RollADiceViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E48A6841D6E331D00296D4E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		404477BD1D62BD040088DF72 /* RandomWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
 		4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberViewController.swift; sourceTree = "<group>"; };
 		4049E7311D62683C00B7DD77 /* RollADiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollADiceViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				40AEFB3F1D6258370056476C /* Info.plist */,
 				40AEFB3A1D6258370056476C /* Assets.xcassets */,
 				40AEFB331D6258370056476C /* AppDelegate.swift */,
+				2E48A6841D6E331D00296D4E /* Extensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				404477BE1D62BD040088DF72 /* RandomWordViewController.swift in Sources */,
 				4049E7321D62683C00B7DD77 /* RollADiceViewController.swift in Sources */,
 				CE3E332D1D67579D00DD258A /* MenuViewController.swift in Sources */,
+				2E48A6851D6E331D00296D4E /* Extensions.swift in Sources */,
 				40AEFB341D6258370056476C /* AppDelegate.swift in Sources */,
 				CE3E332B1D67578000DD258A /* RandomLetterViewController.swift in Sources */,
 				40DF05A41D654AD50059D6DC /* YesOrNoViewController.swift in Sources */,

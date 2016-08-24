@@ -556,7 +556,7 @@
                                     <rect key="frame" x="175" y="475" width="51" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="randomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDe-OF-zW6"/>
+                                    <action selector="randomButton:" destination="k66-8y-Xop" eventType="touchUpInside" id="PjE-cp-lz8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-b4-rcr">
@@ -634,6 +634,7 @@
                     <connections>
                         <outlet property="firstField" destination="phd-B7-CbL" id="XrY-wC-eGM"/>
                         <outlet property="lastField" destination="GNX-t3-w9g" id="IGb-i4-j26"/>
+                        <outlet property="resultLabel" destination="7hk-Bv-gdn" id="mi5-sK-4EA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLG-FA-7aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
