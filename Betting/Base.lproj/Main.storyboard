@@ -25,6 +25,8 @@
         <mutableArray key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
+            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -291,122 +293,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-HS-q0t" userLabel="Random Word">
-                                <rect key="frame" x="0.0" y="444" width="188" height="223"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.34901960784313724" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Random Word">
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="Bn1-Gq-Yn0" kind="show" id="Mds-bd-Gpt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-Z6-f9L" userLabel="Roll a Dice">
-                                <rect key="frame" x="187" y="444" width="188" height="223"/>
-                                <color key="backgroundColor" red="0.60392156862745094" green="0.35294117647058826" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">Roll
-a
-Dice</string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="Vhe-fQ-4AM" kind="show" id="RQ3-Ch-0DV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-oB-8LM" userLabel="Random Letter">
-                                <rect key="frame" x="0.0" y="222" width="188" height="222"/>
-                                <color key="backgroundColor" red="0.99215686274509807" green="0.82745098039215681" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Random Letter">
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="k66-8y-Xop" kind="show" id="B6i-7V-BNN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-OH-iax" userLabel="Heads or Tails">
-                                <rect key="frame" x="187" y="222" width="188" height="222"/>
-                                <color key="backgroundColor" red="0.22745098039215686" green="0.69411764705882351" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Heads or Tails">
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="yQM-1e-Xjn" kind="show" id="Vu6-Eq-GWc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2" userLabel="Random Number">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2" userLabel="Random Number">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="222"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.29803921568627451" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Random Number">
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="height" multiplier="94:111" id="TEu-91-7m6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
+                                <state key="normal" backgroundImage="randomnumber">
+                                    <color key="titleColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Dhg-tS-Djl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH" userLabel="Yes or No">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-Z6-f9L" userLabel="Roll a Dice">
+                                <rect key="frame" x="187" y="444" width="188" height="223"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.35294117647058826" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cKa-Z6-f9L" secondAttribute="height" multiplier="188:223" id="fAg-c3-hOH"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="rolladice">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vhe-fQ-4AM" kind="show" id="RQ3-Ch-0DV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-oB-8LM" userLabel="Random Letter">
+                                <rect key="frame" x="0.0" y="222" width="188" height="222"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.82745098039215681" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vgE-oB-8LM" secondAttribute="height" multiplier="94:111" id="bXy-nK-zvu"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="randomletter">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="k66-8y-Xop" kind="show" id="B6i-7V-BNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-OH-iax" userLabel="Heads or Tails">
+                                <rect key="frame" x="187" y="222" width="188" height="222"/>
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.69411764705882351" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GLS-OH-iax" secondAttribute="height" multiplier="94:111" id="geF-S6-6kd"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="headsortails">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yQM-1e-Xjn" kind="show" id="Vu6-Eq-GWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH" userLabel="Yes or No">
                                 <rect key="frame" x="187" y="0.0" width="188" height="222"/>
                                 <color key="backgroundColor" red="0.17647058823529413" green="0.81960784313725488" blue="0.41568627450980394" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">Yes or
-No</string>
-                                            <attributes>
-                                                <color key="NSColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
-                                                <font key="NSOriginalFont" size="30" name="GothamRounded-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iWZ-bo-SEH" secondAttribute="height" multiplier="94:111" id="Bkv-Wn-nLv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
+                                <state key="normal" backgroundImage="yesorno">
+                                    <color key="titleColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="TQ9-qh-38u" kind="show" id="V6v-vW-gnL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-HS-q0t" userLabel="Random Word">
+                                <rect key="frame" x="0.0" y="444" width="188" height="223"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.34901960784313724" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xOR-HS-q0t" secondAttribute="height" multiplier="188:223" id="4u1-bW-Njp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="randomword">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bn1-Gq-Yn0" kind="show" id="Mds-bd-Gpt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GLS-OH-iax" firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="width" id="0Hi-sN-nzo"/>
+                            <constraint firstItem="cKa-Z6-f9L" firstAttribute="trailing" secondItem="iWZ-bo-SEH" secondAttribute="trailing" id="3Al-aJ-lnb"/>
+                            <constraint firstItem="GLS-OH-iax" firstAttribute="top" secondItem="vgE-oB-8LM" secondAttribute="top" id="4Jd-I2-kpc"/>
+                            <constraint firstItem="GLS-OH-iax" firstAttribute="trailing" secondItem="iWZ-bo-SEH" secondAttribute="trailing" id="4SX-fT-pZG"/>
+                            <constraint firstItem="cKa-Z6-f9L" firstAttribute="top" secondItem="xOR-HS-q0t" secondAttribute="top" id="5DW-rJ-DIn"/>
+                            <constraint firstItem="YVF-Ju-gJd" firstAttribute="top" secondItem="cKa-Z6-f9L" secondAttribute="bottom" id="DrU-L9-Mnk"/>
+                            <constraint firstItem="xOR-HS-q0t" firstAttribute="leading" secondItem="eS6-pd-As2" secondAttribute="leading" id="FXS-bp-8EW"/>
+                            <constraint firstItem="xOR-HS-q0t" firstAttribute="height" secondItem="eS6-pd-As2" secondAttribute="height" id="LwU-Xo-kvH"/>
+                            <constraint firstItem="vgE-oB-8LM" firstAttribute="height" secondItem="eS6-pd-As2" secondAttribute="height" id="N25-07-JSp"/>
+                            <constraint firstItem="xOR-HS-q0t" firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="width" id="NDb-yl-9hf"/>
+                            <constraint firstItem="YVF-Ju-gJd" firstAttribute="top" secondItem="xOR-HS-q0t" secondAttribute="bottom" id="NeB-0t-fbC"/>
+                            <constraint firstItem="iWZ-bo-SEH" firstAttribute="top" secondItem="eS6-pd-As2" secondAttribute="top" id="NqZ-oC-OuS"/>
+                            <constraint firstItem="iWZ-bo-SEH" firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="width" id="O3c-mX-zpt"/>
+                            <constraint firstItem="vgE-oB-8LM" firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="width" id="OaW-KT-NCu"/>
+                            <constraint firstItem="iWZ-bo-SEH" firstAttribute="height" secondItem="eS6-pd-As2" secondAttribute="height" id="QAy-vy-x1O"/>
+                            <constraint firstItem="eS6-pd-As2" firstAttribute="top" secondItem="4qC-Cv-q9B" secondAttribute="top" id="TRc-M9-7in"/>
+                            <constraint firstAttribute="trailing" secondItem="iWZ-bo-SEH" secondAttribute="trailing" id="UH5-fk-t53"/>
+                            <constraint firstItem="cKa-Z6-f9L" firstAttribute="width" secondItem="eS6-pd-As2" secondAttribute="width" id="VPt-4h-w61"/>
+                            <constraint firstItem="cKa-Z6-f9L" firstAttribute="height" secondItem="eS6-pd-As2" secondAttribute="height" id="c7M-Hf-Bm8"/>
+                            <constraint firstItem="vgE-oB-8LM" firstAttribute="leading" secondItem="eS6-pd-As2" secondAttribute="leading" id="dpB-CY-kLS"/>
+                            <constraint firstItem="eS6-pd-As2" firstAttribute="leading" secondItem="4qC-Cv-q9B" secondAttribute="leading" id="i7i-6l-Blq"/>
+                            <constraint firstItem="GLS-OH-iax" firstAttribute="top" secondItem="iWZ-bo-SEH" secondAttribute="bottom" id="iQz-Ua-20V"/>
+                            <constraint firstItem="vgE-oB-8LM" firstAttribute="top" secondItem="eS6-pd-As2" secondAttribute="bottom" id="jWk-kd-TX8"/>
+                            <constraint firstItem="GLS-OH-iax" firstAttribute="height" secondItem="eS6-pd-As2" secondAttribute="height" id="k5b-1A-13i"/>
+                            <constraint firstItem="cKa-Z6-f9L" firstAttribute="top" secondItem="GLS-OH-iax" secondAttribute="bottom" id="mdI-xa-SjW"/>
+                            <constraint firstItem="iWZ-bo-SEH" firstAttribute="top" secondItem="4qC-Cv-q9B" secondAttribute="top" id="ypX-K8-8Oe"/>
+                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -647,7 +643,13 @@ No</string>
         <image name="ask" width="150" height="150"/>
         <image name="close" width="24" height="24"/>
         <image name="flip" width="150" height="150"/>
+        <image name="headsortails" width="187" height="222"/>
         <image name="push" width="150" height="150"/>
+        <image name="randomletter" width="188" height="222"/>
+        <image name="randomnumber" width="188" height="222"/>
+        <image name="randomword" width="188" height="222"/>
         <image name="roll" width="150" height="150"/>
+        <image name="rolladice" width="187" height="222"/>
+        <image name="yesorno" width="187" height="222"/>
     </resources>
 </document>
