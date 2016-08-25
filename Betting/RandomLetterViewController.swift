@@ -19,7 +19,6 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     
     
     // dismiss keyboard quando clicar em return
-    
     func setRandomBackgroundColor() {
         
         let colors = [

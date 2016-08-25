@@ -79,4 +79,7 @@ class RandomNumberViewController: UIViewController {
         self.setRandomBackgroundColor()
     }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+    }
 }

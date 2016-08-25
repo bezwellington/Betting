@@ -36,15 +36,6 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    // dismiss keyboard quando clicar em return
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        print("TextField should return")
-        return true
-    }
-    
-
     @IBOutlet weak var firstOptionField: UITextField!
     @IBOutlet weak var secondOptionField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
@@ -82,21 +73,29 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-
+//MARK: LEMBRAR DE ADICIONAR OS ALERTAS
     @IBAction func pushButton(sender: AnyObject) {
         
-        resultLabel.text = String((firstOptionField.text!)...(secondOptionField.text!))
+        vWords += [firstOptionField.text!, secondOptionField.text!]
         
-//        if (vWords.count > 1) {
-//        index = randomNumber(0...vWords.count-1)
-//        print (vWords[index])
-//        resultLabel.text = vWords[index]
-//        }
+        if (vWords.count > 1) {
+        index = randomNumber(0...vWords.count-1)
+        print (vWords[index])
+        resultLabel.text = vWords[index]
+        }
         
         self.setRandomBackgroundColor()
         
     }
     
+    //MARK: Textfield Delegate Metods:
+    
+    // dismiss keyboard quando clicar em return
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        print("TextField should return")
+        return true
+    }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
