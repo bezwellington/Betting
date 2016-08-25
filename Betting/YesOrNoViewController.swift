@@ -18,6 +18,9 @@ class YesOrNoViewController: UIViewController {
     }
     
     
+    let screenSize = UIScreen.mainScreen().bounds
+    
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     
@@ -27,6 +30,28 @@ class YesOrNoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setFontSize()
+        
+    }
+    
+    
+    func setFontSize() {
+        
+        let height = screenSize.height
+        
+        switch height {
+        case 736: // iphone 6+
+            resultLabel.font = resultLabel.font.fontWithSize(100)
+            print("iphone 6+")
+        case 667: // iphone 6
+            resultLabel.font = resultLabel.font.fontWithSize(70)
+            print("iphone 6")
+        default:
+            resultLabel.font = resultLabel.font.fontWithSize(49)
+            print("iphone 5")
+        }
+        
     }
     
     

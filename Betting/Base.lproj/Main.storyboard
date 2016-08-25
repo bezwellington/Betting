@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="GothamRnd-Bold.otf">
@@ -239,8 +240,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-uH-GTG" userLabel="Ask Button">
-                                <rect key="frame" x="122" y="436" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-uH-GTG" userLabel="Ask Button">
+                                <rect key="frame" x="124" y="436" width="128" height="130"/>
                                 <state key="normal" backgroundImage="ask"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="174" y="379" width="51" height="30"/>
@@ -256,9 +257,9 @@
                                     <action selector="closeButton:" destination="TQ9-qh-38u" eventType="touchUpInside" id="FBB-jI-4ig"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZLC-yO-wlC">
-                                <rect key="frame" x="20" y="139" width="335" height="70"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLC-yO-wlC">
+                                <rect key="frame" x="103" y="142" width="171" height="70"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -269,7 +270,14 @@
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kuR-Nl-r3D" secondAttribute="trailing" constant="18" id="9AH-1l-k8x"/>
+                            <constraint firstItem="rB2-uH-GTG" firstAttribute="height" secondItem="dyv-wo-u5p" secondAttribute="height" multiplier="0.194" id="9sm-GM-nw8"/>
+                            <constraint firstItem="O58-sb-0o0" firstAttribute="top" secondItem="rB2-uH-GTG" secondAttribute="bottom" constant="101" id="BgM-XO-hB8"/>
+                            <constraint firstItem="rB2-uH-GTG" firstAttribute="centerX" secondItem="dyv-wo-u5p" secondAttribute="centerX" id="L8k-Xr-QYa"/>
+                            <constraint firstItem="ZLC-yO-wlC" firstAttribute="leading" secondItem="dyv-wo-u5p" secondAttribute="leading" constant="103" id="Zje-Ub-f3u"/>
+                            <constraint firstItem="rB2-uH-GTG" firstAttribute="width" secondItem="dyv-wo-u5p" secondAttribute="width" multiplier="0.34" id="bFS-wN-6kW"/>
+                            <constraint firstItem="ZLC-yO-wlC" firstAttribute="top" secondItem="oa4-8R-LkP" secondAttribute="bottom" constant="122" id="ulo-xn-bPH"/>
                             <constraint firstItem="kuR-Nl-r3D" firstAttribute="top" secondItem="dyv-wo-u5p" secondAttribute="top" constant="18" id="yJp-hY-jYJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZLC-yO-wlC" secondAttribute="trailing" constant="101" id="zdY-MD-0tj"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
