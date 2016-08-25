@@ -25,8 +25,6 @@
         <mutableArray key="GothamRnd-Medium.otf">
             <string>GothamRounded-Medium</string>
             <string>GothamRounded-Medium</string>
-            <string>GothamRounded-Medium</string>
-            <string>GothamRounded-Medium</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -134,8 +132,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
                                 <rect key="frame" x="38" y="118" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n9C-fQ-dzc" secondAttribute="height" multiplier="10:1" id="mYF-w4-ROU"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -153,8 +154,37 @@
                                     <action selector="closeButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Bip-YB-WiA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-rB-gry" userLabel="Push Button">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-EW-Uzf" userLabel="Result Label">
+                                <rect key="frame" x="19" y="212" width="337" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cwf-EW-Uzf" secondAttribute="height" multiplier="337:112" id="Lyd-Qg-0uE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="258" width="128" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
+                                <rect key="frame" x="38" y="170" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PCS-KL-UqW" secondAttribute="height" multiplier="10:1" id="v4M-Iv-XdH"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-rB-gry" userLabel="Push Button">
                                 <rect key="frame" x="123" y="456" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j9U-rB-gry" secondAttribute="height" multiplier="1:1" id="5fi-ev-Vx0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="WWn-OO-WSk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="oH5-fB-2tM"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="push"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="435" width="51" height="30"/>
@@ -163,29 +193,25 @@
                                     <action selector="pushButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Meb-Ja-k3u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-EW-Uzf" userLabel="Result Label">
-                                <rect key="frame" x="18" y="212" width="337" height="112"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="258" width="128" height="21"/>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
-                                <rect key="frame" x="38" y="170" width="300" height="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
-                                </variation>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="top" secondItem="HdU-YK-vBu" secondAttribute="bottom" constant="76" id="09j-fW-h9G"/>
                             <constraint firstAttribute="trailing" secondItem="HdU-YK-vBu" secondAttribute="trailing" constant="18" id="1a7-hg-fC2"/>
+                            <constraint firstItem="4YE-dq-qoe" firstAttribute="top" secondItem="j9U-rB-gry" secondAttribute="bottom" constant="81" id="5l2-S7-9b6"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" priority="700" constant="123" id="MC1-qf-e4z"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="top" secondItem="n9C-fQ-dzc" secondAttribute="bottom" constant="22" id="NnM-QG-t0S"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="top" secondItem="Cwf-EW-Uzf" secondAttribute="bottom" constant="132" id="Pcj-gE-ndy"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="centerX" secondItem="dzU-ll-3ga" secondAttribute="centerX" id="Sa5-90-Nfz"/>
+                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="19" id="WNK-PD-ucV"/>
+                            <constraint firstAttribute="trailing" secondItem="j9U-rB-gry" secondAttribute="trailing" priority="700" constant="122" id="Y8N-rf-cQ5"/>
                             <constraint firstItem="HdU-YK-vBu" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="18" id="le5-MB-8nF"/>
+                            <constraint firstAttribute="trailing" secondItem="n9C-fQ-dzc" secondAttribute="trailing" constant="37" id="nQG-Wk-0BJ"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="oLf-m9-614"/>
+                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="top" secondItem="PCS-KL-UqW" secondAttribute="bottom" constant="12" id="vBm-m3-6S5"/>
+                            <constraint firstAttribute="trailing" secondItem="PCS-KL-UqW" secondAttribute="trailing" constant="37" id="zcS-Ai-o4J"/>
+                            <constraint firstAttribute="trailing" secondItem="Cwf-EW-Uzf" secondAttribute="trailing" constant="19" id="zfM-jR-XYh"/>
+                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="zpA-3l-CQa"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -211,17 +237,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLC-yO-wlC">
-                                <rect key="frame" x="20" y="139" width="335" height="70"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="51"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="134" y="244" width="133" height="60"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-uH-GTG" userLabel="Ask Button">
-                                <rect key="frame" x="123" y="436" width="130" height="130"/>
+                                <rect key="frame" x="122" y="436" width="130" height="130"/>
                                 <state key="normal" backgroundImage="ask"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="174" y="379" width="51" height="30"/>
@@ -237,6 +254,15 @@
                                     <action selector="closeButton:" destination="TQ9-qh-38u" eventType="touchUpInside" id="FBB-jI-4ig"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YES!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZLC-yO-wlC">
+                                <rect key="frame" x="20" y="139" width="335" height="70"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="244" width="133" height="60"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -265,52 +291,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2" userLabel="Random Number">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-HS-q0t" userLabel="Random Word">
+                                <rect key="frame" x="0.0" y="444" width="188" height="223"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.34901960784313724" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Random Word">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Bn1-Gq-Yn0" kind="show" id="Mds-bd-Gpt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-Z6-f9L" userLabel="Roll a Dice">
+                                <rect key="frame" x="187" y="444" width="188" height="223"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.35294117647058826" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">Roll
+a
+Dice</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Vhe-fQ-4AM" kind="show" id="RQ3-Ch-0DV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-oB-8LM" userLabel="Random Letter">
+                                <rect key="frame" x="0.0" y="222" width="188" height="222"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.82745098039215681" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Random Letter">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="k66-8y-Xop" kind="show" id="B6i-7V-BNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-OH-iax" userLabel="Heads or Tails">
+                                <rect key="frame" x="187" y="222" width="188" height="222"/>
+                                <color key="backgroundColor" red="0.22745098039215686" green="0.69411764705882351" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Heads or Tails">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="yQM-1e-Xjn" kind="show" id="Vu6-Eq-GWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eS6-pd-As2" userLabel="Random Number">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="222"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
-                                <state key="normal" backgroundImage="randomnumber">
-                                    <color key="titleColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.29803921568627451" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Random Number">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Dhg-tS-Djl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH" userLabel="Yes or No">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWZ-bo-SEH" userLabel="Yes or No">
                                 <rect key="frame" x="187" y="0.0" width="188" height="222"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="30"/>
-                                <state key="normal" backgroundImage="yesorno">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.17647058823529413" green="0.81960784313725488" blue="0.41568627450980394" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment>
+                                            <string key="content">Yes or
+No</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="30" name="GothamRounded-Medium"/>
+                                                <font key="NSOriginalFont" size="30" name="GothamRounded-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <segue destination="TQ9-qh-38u" kind="show" id="V6v-vW-gnL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-oB-8LM" userLabel="Random Letter">
-                                <rect key="frame" x="0.0" y="222" width="188" height="222"/>
-                                <state key="normal" backgroundImage="randomletter"/>
-                                <connections>
-                                    <segue destination="k66-8y-Xop" kind="show" id="B6i-7V-BNN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLS-OH-iax" userLabel="Heads or Tails">
-                                <rect key="frame" x="187" y="222" width="188" height="222"/>
-                                <state key="normal" backgroundImage="headsortails"/>
-                                <connections>
-                                    <segue destination="yQM-1e-Xjn" kind="show" id="Vu6-Eq-GWc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-HS-q0t" userLabel="Random Word">
-                                <rect key="frame" x="0.0" y="444" width="188" height="223"/>
-                                <state key="normal" backgroundImage="randomword"/>
-                                <connections>
-                                    <segue destination="Bn1-Gq-Yn0" kind="show" id="Mds-bd-Gpt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-Z6-f9L" userLabel="Roll a Dice">
-                                <rect key="frame" x="187" y="444" width="188" height="223"/>
-                                <state key="normal" backgroundImage="rolladice"/>
-                                <connections>
-                                    <segue destination="Vhe-fQ-4AM" kind="show" id="RQ3-Ch-0DV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -335,8 +427,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-e7-qpp">
-                                <rect key="frame" x="88" y="134" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-e7-qpp">
+                                <rect key="frame" x="87" y="134" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4cS-e7-qpp" secondAttribute="height" multiplier="1:1" id="vDd-7g-ehg"/>
+                                </constraints>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="102" y="175" width="196" height="169"/>
                                 </variation>
@@ -351,8 +446,13 @@
                                     <action selector="closeButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="ZMs-1a-Kdf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivv-xK-l1g" userLabel="Flip Button">
-                                <rect key="frame" x="123" y="436" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivv-xK-l1g" userLabel="Flip Button">
+                                <rect key="frame" x="112" y="436" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="4e0-Px-cAa"/>
+                                    <constraint firstAttribute="width" secondItem="ivv-xK-l1g" secondAttribute="height" multiplier="1:1" id="adN-5I-Kpa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="c58-QJ-BzK"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="flip"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="465" width="51" height="30"/>
@@ -364,8 +464,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="leading" secondItem="OcG-ch-bcn" secondAttribute="leading" constant="87" id="AxX-N1-84w"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="top" secondItem="4cS-e7-qpp" secondAttribute="bottom" constant="102" id="D75-bc-Ctg"/>
                             <constraint firstAttribute="trailing" secondItem="jrS-gK-BrW" secondAttribute="trailing" constant="18" id="E2d-Ee-zOI"/>
+                            <constraint firstAttribute="trailing" secondItem="4cS-e7-qpp" secondAttribute="trailing" constant="88" id="Eyc-eC-ygP"/>
                             <constraint firstItem="jrS-gK-BrW" firstAttribute="top" secondItem="OcG-ch-bcn" secondAttribute="top" constant="18" id="Ot3-AI-epm"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="leading" secondItem="OcG-ch-bcn" secondAttribute="leading" priority="700" constant="123" id="SQ5-Iq-JIK"/>
+                            <constraint firstAttribute="trailing" secondItem="ivv-xK-l1g" secondAttribute="trailing" priority="700" constant="122" id="fhl-Hr-BU7"/>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="top" secondItem="0zV-YK-9uG" secondAttribute="bottom" constant="114" id="hfE-0e-2Iz"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="zb2-gK-Vjj"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -389,8 +496,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-m9-q8H" userLabel="Roll Button">
-                                <rect key="frame" x="122" y="436" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-m9-q8H" userLabel="Roll Button">
+                                <rect key="frame" x="113" y="436" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aU7-m9-q8H" secondAttribute="height" multiplier="1:1" id="MTS-x6-us3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="hvN-03-VDh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="z12-TD-wos"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="roll"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="471" width="51" height="30"/>
@@ -409,14 +521,24 @@
                                     <action selector="closeButton:" destination="Vhe-fQ-4AM" eventType="touchUpInside" id="6um-qw-to4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dax-tU-kpN">
-                                <rect key="frame" x="137" y="134" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dax-tU-kpN">
+                                <rect key="frame" x="87" y="134" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dax-tU-kpN" secondAttribute="height" multiplier="1:1" id="lfl-wg-g3T"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aU7-m9-q8H" secondAttribute="trailing" priority="700" constant="123" id="3F0-oW-WQs"/>
+                            <constraint firstItem="dax-tU-kpN" firstAttribute="leading" secondItem="hfi-xT-Q0x" secondAttribute="leading" constant="87" id="3dV-3E-zz2"/>
+                            <constraint firstItem="aU7-m9-q8H" firstAttribute="leading" secondItem="hfi-xT-Q0x" secondAttribute="leading" priority="700" constant="122" id="Evd-Wb-Dje"/>
                             <constraint firstItem="yoB-kx-W7K" firstAttribute="top" secondItem="hfi-xT-Q0x" secondAttribute="top" constant="18" id="GNt-6K-SAQ"/>
+                            <constraint firstItem="aU7-m9-q8H" firstAttribute="centerX" secondItem="hfi-xT-Q0x" secondAttribute="centerX" id="Lol-DV-e3G"/>
+                            <constraint firstItem="aU7-m9-q8H" firstAttribute="top" secondItem="dax-tU-kpN" secondAttribute="bottom" constant="102" id="Mcz-sj-OBu"/>
                             <constraint firstAttribute="trailing" secondItem="yoB-kx-W7K" secondAttribute="trailing" constant="18" id="Ykt-Af-zK4"/>
+                            <constraint firstAttribute="trailing" secondItem="dax-tU-kpN" secondAttribute="trailing" constant="88" id="jel-5S-Iil"/>
+                            <constraint firstItem="dax-tU-kpN" firstAttribute="top" secondItem="xMb-Dt-ODa" secondAttribute="bottom" constant="114" id="mIJ-6k-slY"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -525,13 +647,7 @@
         <image name="ask" width="150" height="150"/>
         <image name="close" width="24" height="24"/>
         <image name="flip" width="150" height="150"/>
-        <image name="headsortails" width="187" height="222"/>
         <image name="push" width="150" height="150"/>
-        <image name="randomletter" width="188" height="222"/>
-        <image name="randomnumber" width="188" height="222"/>
-        <image name="randomword" width="188" height="222"/>
         <image name="roll" width="150" height="150"/>
-        <image name="rolladice" width="187" height="222"/>
-        <image name="yesorno" width="187" height="222"/>
     </resources>
 </document>
