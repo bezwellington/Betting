@@ -135,59 +135,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
-                                <rect key="frame" x="38" y="118" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="n9C-fQ-dzc" secondAttribute="height" multiplier="10:1" id="mYF-w4-ROU"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
-                                </variation>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-YK-vBu" userLabel="Close Button">
-                                <rect key="frame" x="333" y="18" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="HdU-YK-vBu" secondAttribute="height" multiplier="1:1" id="HxJ-OE-0Nu"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="close"/>
-                                <connections>
-                                    <action selector="closeButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Bip-YB-WiA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-EW-Uzf" userLabel="Result Label">
-                                <rect key="frame" x="19" y="212" width="337" height="112"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Cwf-EW-Uzf" secondAttribute="height" multiplier="337:112" id="Lyd-Qg-0uE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="258" width="128" height="21"/>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
-                                <rect key="frame" x="38" y="170" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PCS-KL-UqW" secondAttribute="height" multiplier="10:1" id="v4M-Iv-XdH"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-rB-gry" userLabel="Push Button">
-                                <rect key="frame" x="123" y="456" width="130" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="j9U-rB-gry" secondAttribute="height" multiplier="1:1" id="5fi-ev-Vx0"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="WWn-OO-WSk"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="oH5-fB-2tM"/>
-                                </constraints>
+                                <rect key="frame" x="124" y="436" width="127" height="130"/>
                                 <state key="normal" backgroundImage="push"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="435" width="51" height="30"/>
@@ -196,25 +145,58 @@
                                     <action selector="pushButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Meb-Ja-k3u"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
+                                <rect key="frame" x="38" y="118" width="300" height="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-YK-vBu" userLabel="Close Button">
+                                <rect key="frame" x="326" y="25" width="24" height="24"/>
+                                <state key="normal" backgroundImage="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Bip-YB-WiA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
+                                <rect key="frame" x="38" y="160" width="300" height="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="120" width="193" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jljblkjbljhv" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-EW-Uzf" userLabel="Result Label">
+                                <rect key="frame" x="56" y="284" width="263" height="50"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="258" width="128" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="top" secondItem="HdU-YK-vBu" secondAttribute="bottom" constant="76" id="09j-fW-h9G"/>
-                            <constraint firstAttribute="trailing" secondItem="HdU-YK-vBu" secondAttribute="trailing" constant="18" id="1a7-hg-fC2"/>
-                            <constraint firstItem="4YE-dq-qoe" firstAttribute="top" secondItem="j9U-rB-gry" secondAttribute="bottom" constant="81" id="5l2-S7-9b6"/>
-                            <constraint firstItem="j9U-rB-gry" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" priority="700" constant="123" id="MC1-qf-e4z"/>
-                            <constraint firstItem="PCS-KL-UqW" firstAttribute="top" secondItem="n9C-fQ-dzc" secondAttribute="bottom" constant="22" id="NnM-QG-t0S"/>
-                            <constraint firstItem="j9U-rB-gry" firstAttribute="top" secondItem="Cwf-EW-Uzf" secondAttribute="bottom" constant="132" id="Pcj-gE-ndy"/>
-                            <constraint firstItem="j9U-rB-gry" firstAttribute="centerX" secondItem="dzU-ll-3ga" secondAttribute="centerX" id="Sa5-90-Nfz"/>
-                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="19" id="WNK-PD-ucV"/>
-                            <constraint firstAttribute="trailing" secondItem="j9U-rB-gry" secondAttribute="trailing" priority="700" constant="122" id="Y8N-rf-cQ5"/>
-                            <constraint firstItem="HdU-YK-vBu" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="18" id="le5-MB-8nF"/>
-                            <constraint firstAttribute="trailing" secondItem="n9C-fQ-dzc" secondAttribute="trailing" constant="37" id="nQG-Wk-0BJ"/>
-                            <constraint firstItem="PCS-KL-UqW" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="oLf-m9-614"/>
-                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="top" secondItem="PCS-KL-UqW" secondAttribute="bottom" constant="12" id="vBm-m3-6S5"/>
-                            <constraint firstAttribute="trailing" secondItem="PCS-KL-UqW" secondAttribute="trailing" constant="37" id="zcS-Ai-o4J"/>
-                            <constraint firstAttribute="trailing" secondItem="Cwf-EW-Uzf" secondAttribute="trailing" constant="19" id="zfM-jR-XYh"/>
-                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="zpA-3l-CQa"/>
+                            <constraint firstItem="HdU-YK-vBu" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="25" id="24h-6d-6oj"/>
+                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="2aS-nL-DGd"/>
+                            <constraint firstAttribute="trailing" secondItem="HdU-YK-vBu" secondAttribute="trailing" constant="25" id="7md-Uz-N02"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="width" secondItem="n9C-fQ-dzc" secondAttribute="width" id="GYN-rP-mrI"/>
+                            <constraint firstItem="4YE-dq-qoe" firstAttribute="top" secondItem="j9U-rB-gry" secondAttribute="bottom" constant="101" id="Mrj-au-mkG"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="width" secondItem="dzU-ll-3ga" secondAttribute="width" multiplier="0.34" id="N3j-mb-2TO"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="top" secondItem="n9C-fQ-dzc" secondAttribute="bottom" constant="22" id="Odg-Dj-q4c"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="centerX" secondItem="dzU-ll-3ga" secondAttribute="centerX" id="R8d-Tc-za1"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="height" secondItem="n9C-fQ-dzc" secondAttribute="height" id="VME-MG-cml"/>
+                            <constraint firstItem="n9C-fQ-dzc" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="118" id="WwK-wa-GfO"/>
+                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="centerX" secondItem="n9C-fQ-dzc" secondAttribute="centerX" id="Wym-Aa-JCx"/>
+                            <constraint firstItem="PCS-KL-UqW" firstAttribute="centerX" secondItem="n9C-fQ-dzc" secondAttribute="centerX" id="cae-jN-82a"/>
+                            <constraint firstAttribute="trailing" secondItem="n9C-fQ-dzc" secondAttribute="trailing" constant="37" id="dMW-WI-yOb"/>
+                            <constraint firstItem="j9U-rB-gry" firstAttribute="height" secondItem="dzU-ll-3ga" secondAttribute="height" multiplier="0.194" id="hBQ-FU-taC"/>
+                            <constraint firstItem="Cwf-EW-Uzf" firstAttribute="centerY" secondItem="dzU-ll-3ga" secondAttribute="centerY" constant="-25" id="zmG-bq-3gx"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

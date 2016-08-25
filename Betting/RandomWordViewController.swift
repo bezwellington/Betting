@@ -18,6 +18,9 @@ class RandomWordViewController: UIViewController {
     }
     
     
+    let screenSize = UIScreen.mainScreen().bounds
+    
+    
     var auxRandom = -1
     
     
@@ -63,6 +66,28 @@ class RandomWordViewController: UIViewController {
         
         textFieldStyles(firstOptionField)
         textFieldStyles(secondOptionField)
+        
+        setFontSize()
+        
+    }
+    
+    
+    func setFontSize() {
+        
+        let height = screenSize.height
+        
+        switch height {
+        case 736: // iphone 6+
+            resultLabel.font = resultLabel.font.fontWithSize(80)
+            print("iphone 6+")
+        case 667: // iphone 6
+            resultLabel.font = resultLabel.font.fontWithSize(50)
+            print("iphone 6")
+        default:
+            resultLabel.font = resultLabel.font.fontWithSize(39)
+            print("iphone 5")
+        }
+        
     }
 
 
