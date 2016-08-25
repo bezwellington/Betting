@@ -433,30 +433,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-e7-qpp">
                                 <rect key="frame" x="87" y="134" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4cS-e7-qpp" secondAttribute="height" multiplier="1:1" id="vDd-7g-ehg"/>
-                                </constraints>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="102" y="175" width="196" height="169"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrS-gK-BrW" userLabel="Close Button">
-                                <rect key="frame" x="333" y="18" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jrS-gK-BrW" secondAttribute="height" multiplier="1:1" id="O44-m6-SS6"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="close"/>
-                                <connections>
-                                    <action selector="closeButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="ZMs-1a-Kdf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivv-xK-l1g" userLabel="Flip Button">
-                                <rect key="frame" x="112" y="436" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="4e0-Px-cAa"/>
-                                    <constraint firstAttribute="width" secondItem="ivv-xK-l1g" secondAttribute="height" multiplier="1:1" id="adN-5I-Kpa"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="130" id="c58-QJ-BzK"/>
-                                </constraints>
+                                <rect key="frame" x="124" y="436" width="127" height="130"/>
                                 <state key="normal" backgroundImage="flip"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="465" width="51" height="30"/>
@@ -465,18 +447,24 @@
                                     <action selector="flipButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="fU0-Oi-hcb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrS-gK-BrW" userLabel="Close Button">
+                                <rect key="frame" x="333" y="18" width="24" height="24"/>
+                                <state key="normal" backgroundImage="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="ZMs-1a-Kdf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="4cS-e7-qpp" firstAttribute="leading" secondItem="OcG-ch-bcn" secondAttribute="leading" constant="87" id="AxX-N1-84w"/>
-                            <constraint firstItem="ivv-xK-l1g" firstAttribute="top" secondItem="4cS-e7-qpp" secondAttribute="bottom" constant="102" id="D75-bc-Ctg"/>
-                            <constraint firstAttribute="trailing" secondItem="jrS-gK-BrW" secondAttribute="trailing" constant="18" id="E2d-Ee-zOI"/>
-                            <constraint firstAttribute="trailing" secondItem="4cS-e7-qpp" secondAttribute="trailing" constant="88" id="Eyc-eC-ygP"/>
-                            <constraint firstItem="jrS-gK-BrW" firstAttribute="top" secondItem="OcG-ch-bcn" secondAttribute="top" constant="18" id="Ot3-AI-epm"/>
-                            <constraint firstItem="ivv-xK-l1g" firstAttribute="leading" secondItem="OcG-ch-bcn" secondAttribute="leading" priority="700" constant="123" id="SQ5-Iq-JIK"/>
-                            <constraint firstAttribute="trailing" secondItem="ivv-xK-l1g" secondAttribute="trailing" priority="700" constant="122" id="fhl-Hr-BU7"/>
-                            <constraint firstItem="4cS-e7-qpp" firstAttribute="top" secondItem="0zV-YK-9uG" secondAttribute="bottom" constant="114" id="hfE-0e-2Iz"/>
-                            <constraint firstItem="ivv-xK-l1g" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="zb2-gK-Vjj"/>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="top" secondItem="0zV-YK-9uG" secondAttribute="bottom" constant="114" id="ApT-IH-bFh"/>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="height" secondItem="OcG-ch-bcn" secondAttribute="height" multiplier="0.3" id="CIv-fa-W4R"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="width" secondItem="OcG-ch-bcn" secondAttribute="width" multiplier="0.34" id="Hkx-j6-O4a"/>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="width" secondItem="OcG-ch-bcn" secondAttribute="width" multiplier="0.533" id="JCB-1j-iH1"/>
+                            <constraint firstItem="DJy-7b-dfa" firstAttribute="top" secondItem="ivv-xK-l1g" secondAttribute="bottom" constant="101" id="WXy-UZ-wjf"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="height" secondItem="OcG-ch-bcn" secondAttribute="height" multiplier="0.194" id="oER-sf-o2t"/>
+                            <constraint firstItem="ivv-xK-l1g" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="tYs-sw-lyB"/>
+                            <constraint firstItem="4cS-e7-qpp" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="ykg-7G-CNh"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -525,8 +513,8 @@
                                     <action selector="closeButton:" destination="Vhe-fQ-4AM" eventType="touchUpInside" id="6um-qw-to4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dax-tU-kpN">
-                                <rect key="frame" x="87" y="134" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dax-tU-kpN">
+                                <rect key="frame" x="87" y="134" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dax-tU-kpN" secondAttribute="height" multiplier="1:1" id="lfl-wg-g3T"/>
                                 </constraints>
