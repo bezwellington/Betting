@@ -10,19 +10,45 @@ import UIKit
 
 class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var firstField: UITextField!
-    @IBOutlet weak var lastField: UITextField!
-    var firstLett: Int = 0
-    var lastLett: Int = 0
-    
     override func prefersStatusBarHidden() -> Bool { return true }
+    
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func randomButton(sender: AnyObject) {
+    
+    // dismiss keyboard quando clicar em return
+    
+    func setRandomBackgroundColor() {
+        
+        let colors = [
+            UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0), //red
+            UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0), //green
+            UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0), //yellow
+            UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0), //blue
+            UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0), //pink
+            UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0), //purple
+            UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0), //red
+            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0) //salmon
+        ]
+        
+        let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        self.view.backgroundColor = colors[randomColor]
+        
+    }
+
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var firstField: UITextField!
+    @IBOutlet weak var lastField: UITextField!
+    
+    var firstLetter: Int = 0
+    var lastLetter: Int = 0
+
+    
+    @IBAction func pushButton(sender: AnyObject) {
+        
         self.view.endEditing(true)
         
         if let error = checkTextFieldError() {
@@ -32,46 +58,75 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         } else {
             print("Sort Letter")
             //let range = lastLett - firstLett
-            let asciiCode = randomNumber(firstLett...lastLett)
+            let asciiCode = randomNumber(firstLetter...lastLetter)
             var str = ""
             str.append(Character(UnicodeScalar(asciiCode)))
             resultLabel.text = str
         }
+        
+        self.setRandomBackgroundColor()
 
     }
     
+    
     func checkTextFieldError() -> String? {
-        //converte o caractere para padrao unicode
         
+        //converte o caractere para padrao unicode
+
         if firstField.text != "" && lastField.text != "" {
-        firstLett = (firstField.text?.characters.first?.unicodeScalarCodePoint())!
-        lastLett = (lastField.text?.characters.first?.unicodeScalarCodePoint())!
+        firstLetter = (firstField.text?.characters.first?.unicodeScalarCodePoint())!
+        lastLetter = (lastField.text?.characters.first?.unicodeScalarCodePoint())!
         } else {
             return "Don't forget to insert the letter!"
         }
-        
+
         //intervalo do alfabeto maiusculo na tabela ASCII
         let range: Range<Int> = 65...90
         
         //retorna erro de caractere que não é letra maiuscula
-        if !(range.contains(firstLett) && range.contains(lastLett)){
+        if !(range.contains(firstLetter) && range.contains(lastLetter)){
             return "Please insert only letters."
         }
+            
         //retorna erro de ordem errada de letras
-        else if (firstLett > lastLett) {
-            return "Please insert in alphabetical order."
+
+        else if (firstLetter > lastLetter) {
+            return "Please insert in alphabetical order"
         }
         
         return nil
+        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         firstField.delegate = self
         lastField.delegate = self
+        
+        // add style to textfields
+        func textFieldStyles(textField: UITextField) {
+            
+            let border = CALayer()
+            let width = CGFloat(1.0)
+            border.borderColor = UIColor.whiteColor().CGColor
+            
+            border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+            
+            border.borderWidth = width
+            textField.layer.addSublayer(border)
+            textField.layer.masksToBounds = true
+            
+        }
+        
+        textFieldStyles(firstField)
+        textFieldStyles(lastField)
+        
     }
     
     //textField delegate metods:
+
     func textFieldDidEndEditing(textField: UITextField) {
          textField.text = textField.text?.uppercaseString
     }
@@ -80,6 +135,7 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return true
     }
+
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
