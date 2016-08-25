@@ -49,34 +49,59 @@ class RandomNumberViewController: UIViewController {
         endNumberField.text = "100"
         
         // add style to textfields
-        func textFieldStyles(textField: UITextField) {
-            
-            let border = CALayer()
-            let width = CGFloat(1.0)
-            border.borderColor = UIColor.whiteColor().CGColor
-            
-            border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-            
-            border.borderWidth = width
-            textField.layer.addSublayer(border)
-            textField.layer.masksToBounds = true
-            
-        }
         
         textFieldStyles(startNumberField)
         textFieldStyles(endNumberField)
 
     }
 
+    func textFieldStyles(textField: UITextField) {
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.whiteColor().CGColor
+        
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    func checkTextFieldError() -> String? {
+        
+        if startNumberField.text == "" || endNumberField.text == "" {
+            return "Don't forget to insert the number!"
+        }
+            
+        //retorna erro de ordem errada de letras
+        else if Int(startNumberField.text!) > Int(endNumberField.text!) {
+            return "Please insert in ascending order."
+        }
+        
+        return nil
+        
+    }
     
     @IBAction func pushButton(sender: AnyObject) {
-        resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
-        self.setRandomBackgroundColor()
+        
+        if let error = checkTextFieldError() {
+            
+            let alert = UIAlertController(title: "Error!", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+        } else {
+            
+            resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
+            self.setRandomBackgroundColor()
+        }
+        
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

@@ -97,7 +97,6 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,22 +104,23 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         lastField.delegate = self
         
         // add style to textfields
-        func textFieldStyles(textField: UITextField) {
-            
-            let border = CALayer()
-            let width = CGFloat(1.0)
-            border.borderColor = UIColor.whiteColor().CGColor
-            
-            border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
-            
-            border.borderWidth = width
-            textField.layer.addSublayer(border)
-            textField.layer.masksToBounds = true
-            
-        }
-        
+
         textFieldStyles(firstField)
         textFieldStyles(lastField)
+        
+    }
+    
+    func textFieldStyles(textField: UITextField) {
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.whiteColor().CGColor
+        
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width: textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        textField.layer.addSublayer(border)
+        textField.layer.masksToBounds = true
         
     }
     
@@ -147,8 +147,6 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
