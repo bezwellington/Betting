@@ -75,6 +75,11 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
 //MARK: LEMBRAR DE ADICIONAR OS ALERTAS
     @IBAction func pushButton(sender: AnyObject) {
         
+        if let error = checkTextFieldError() {
+            let alert = UIAlertController(title: "Error!", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
         vWords += [firstOptionField.text!, secondOptionField.text!]
         
         if (vWords.count > 1) {
@@ -84,6 +89,17 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.setRandomBackgroundColor()
+        }
+        
+    }
+    
+    func checkTextFieldError() -> String? {
+        
+        if firstOptionField.text == "" || secondOptionField.text == "" {
+            return "Don't forget to insert the word!"
+        }
+        
+        return nil
         
     }
     
