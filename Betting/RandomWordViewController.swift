@@ -53,4 +53,8 @@ class RandomWordViewController: UIViewController {
         randomWordLabel.text = ""
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
 }

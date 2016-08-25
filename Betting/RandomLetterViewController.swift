@@ -42,8 +42,13 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     
     func checkTextFieldError() -> String? {
         //converte o caractere para padrao unicode
+        
+        if firstField.text != "" && lastField.text != "" {
         firstLett = (firstField.text?.characters.first?.unicodeScalarCodePoint())!
         lastLett = (lastField.text?.characters.first?.unicodeScalarCodePoint())!
+        } else {
+            return "Don't forget to insert the letter!"
+        }
         
         //intervalo do alfabeto maiusculo na tabela ASCII
         let range: Range<Int> = 65...90
@@ -54,7 +59,7 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         }
         //retorna erro de ordem errada de letras
         else if (firstLett > lastLett) {
-            return "Please insert in alphabetical order"
+            return "Please insert in alphabetical order."
         }
         
         return nil
@@ -66,8 +71,14 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         lastField.delegate = self
     }
     
+    //textField delegate metods:
     func textFieldDidEndEditing(textField: UITextField) {
          textField.text = textField.text?.uppercaseString
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -76,6 +87,12 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= 1
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
