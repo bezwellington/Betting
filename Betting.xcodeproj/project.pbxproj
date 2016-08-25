@@ -65,10 +65,10 @@
 				40DF05A91D6558CD0059D6DC /* Random.swift */,
 				CE3E332C1D67579D00DD258A /* MenuViewController.swift */,
 				4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */,
-				40DF05A31D654AD50059D6DC /* YesOrNoViewController.swift */,
 				CE3E332A1D67578000DD258A /* RandomLetterViewController.swift */,
-				40DF05A51D65523C0059D6DC /* HeadsOrTailsViewController.swift */,
 				404477BD1D62BD040088DF72 /* RandomWordViewController.swift */,
+				40DF05A31D654AD50059D6DC /* YesOrNoViewController.swift */,
+				40DF05A51D65523C0059D6DC /* HeadsOrTailsViewController.swift */,
 				4049E7311D62683C00B7DD77 /* RollADiceViewController.swift */,
 			);
 			name = Controller;

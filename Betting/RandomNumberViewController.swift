@@ -18,6 +18,10 @@ class RandomNumberViewController: UIViewController {
     }
 
     
+    var auxRandom = -1
+
+    
+    // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
         
         let colors = [
@@ -28,11 +32,19 @@ class RandomNumberViewController: UIViewController {
             UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0), //pink
             UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0), //purple
             UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0), //red
-            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0) //salmon
+            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
         ]
         
-        let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        self.view.backgroundColor = colors[randomColor]
+        var randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        
+        if auxRandom == randomColor {
+            randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        } else {
+            self.view.backgroundColor = colors[randomColor]
+            auxRandom = randomColor
+        }
+        
+        print(randomColor) // printa o número do index
         
     }
     
@@ -48,13 +60,18 @@ class RandomNumberViewController: UIViewController {
         startNumberField.text = "0"
         endNumberField.text = "100"
         
-        // add style to textfields
-        
         textFieldStyles(startNumberField)
         textFieldStyles(endNumberField)
 
     }
-
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    // adiciona estilo aos text fields
     func textFieldStyles(textField: UITextField) {
         
         let border = CALayer()
@@ -68,11 +85,9 @@ class RandomNumberViewController: UIViewController {
         textField.layer.masksToBounds = true
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
+    
+    // verificação de erros
     func checkTextFieldError() -> String? {
         
         if startNumberField.text == "" || endNumberField.text == "" {
@@ -87,6 +102,7 @@ class RandomNumberViewController: UIViewController {
         return nil
         
     }
+    
     
     @IBAction func pushButton(sender: AnyObject) {
         
@@ -104,7 +120,12 @@ class RandomNumberViewController: UIViewController {
         
     }
 
+    
+    // dismiss keyboard quando clica fora
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    
+    
 }

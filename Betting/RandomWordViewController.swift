@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomWordViewController: UIViewController, UITextFieldDelegate {
+class RandomWordViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
@@ -18,6 +18,10 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    var auxRandom = -1
+    
+    
+    // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
         
         let colors = [
@@ -28,13 +32,22 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
             UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0), //pink
             UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0), //purple
             UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0), //red
-            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0) //salmon
+            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
         ]
         
-        let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        self.view.backgroundColor = colors[randomColor]
+        var randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        
+        if auxRandom == randomColor {
+            randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        } else {
+            self.view.backgroundColor = colors[randomColor]
+            auxRandom = randomColor
+        }
+        
+        print(randomColor) // printa o número do index
         
     }
+    
     
     @IBOutlet weak var firstOptionField: UITextField!
     @IBOutlet weak var secondOptionField: UITextField!
@@ -48,11 +61,17 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // add style to textfields
         textFieldStyles(firstOptionField)
         textFieldStyles(secondOptionField)
     }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
+    
+    // adiciona estilo aos text fields
     func textFieldStyles(textField: UITextField) {
         
         let border = CALayer()
@@ -65,10 +84,6 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     
@@ -93,6 +108,7 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     func checkTextFieldError() -> String? {
         
         if firstOptionField.text == "" || secondOptionField.text == "" {
@@ -102,8 +118,14 @@ class RandomWordViewController: UIViewController, UITextFieldDelegate {
         return nil
         
     }
+
     
-    //MARK: Textfield Delegate Metods:
+    
+}
+
+
+
+extension RandomWordViewController: UITextFieldDelegate {
     
     // dismiss keyboard quando clicar em return
     func textFieldShouldReturn(textField: UITextField) -> Bool {

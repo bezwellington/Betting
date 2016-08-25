@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomLetterViewController: UIViewController, UITextFieldDelegate {
+class RandomLetterViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
@@ -18,7 +18,10 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    // dismiss keyboard quando clicar em return
+    var auxRandom = -1
+    
+    
+    // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
         
         let colors = [
@@ -29,11 +32,19 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
             UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0), //pink
             UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0), //purple
             UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0), //red
-            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0) //salmon
+            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
         ]
         
-        let randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        self.view.backgroundColor = colors[randomColor]
+        var randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        
+        if auxRandom == randomColor {
+            randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
+        } else {
+            self.view.backgroundColor = colors[randomColor]
+            auxRandom = randomColor
+        }
+        
+        print(randomColor) // printa o número do index
         
     }
 
@@ -41,6 +52,7 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var firstField: UITextField!
     @IBOutlet weak var lastField: UITextField!
+    
     
     var firstLetter: Int = 0
     var lastLetter: Int = 0
@@ -68,10 +80,10 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    // verificação de erros
     func checkTextFieldError() -> String? {
         
         //converte o caractere para padrao unicode
-
         if firstField.text != "" && lastField.text != "" {
         firstLetter = (firstField.text?.characters.first?.unicodeScalarCodePoint())!
         lastLetter = (lastField.text?.characters.first?.unicodeScalarCodePoint())!
@@ -88,7 +100,6 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         }
             
         //retorna erro de ordem errada de letras
-
         else if (firstLetter > lastLetter) {
             return "Please insert in alphabetical order"
         }
@@ -97,19 +108,25 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         firstField.delegate = self
         lastField.delegate = self
-        
-        // add style to textfields
 
         textFieldStyles(firstField)
         textFieldStyles(lastField)
         
     }
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    // adiciona estilo aos text fields
     func textFieldStyles(textField: UITextField) {
         
         let border = CALayer()
@@ -123,18 +140,25 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         textField.layer.masksToBounds = true
         
     }
-    
-    //textField delegate metods:
 
+    
+
+}
+
+
+
+extension RandomLetterViewController: UITextFieldDelegate {
+    
     func textFieldDidEndEditing(textField: UITextField) {
-         textField.text = textField.text?.uppercaseString
+        textField.text = textField.text?.uppercaseString
     }
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
     }
-
+    
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
@@ -143,13 +167,11 @@ class RandomLetterViewController: UIViewController, UITextFieldDelegate {
         return newLength <= 1
     }
     
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-
+    
 }
