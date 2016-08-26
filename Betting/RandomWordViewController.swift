@@ -120,15 +120,16 @@ class RandomWordViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-        vWords += [firstOptionField.text!, secondOptionField.text!]
+            
+            vWords = [firstOptionField.text!, secondOptionField.text!]
+            
+            if (vWords.count > 1) {
+                index = randomNumber(0...vWords.count-1)
+                print (vWords[index])
+                resultLabel.text = vWords[index]
+            }
         
-        if (vWords.count > 1) {
-        index = randomNumber(0...vWords.count-1)
-        print (vWords[index])
-        resultLabel.text = vWords[index]
-        }
-        
-        self.setRandomBackgroundColor()
+            self.setRandomBackgroundColor()
         }
         
     }
@@ -144,8 +145,6 @@ class RandomWordViewController: UIViewController {
         
     }
 
-    
-    
 }
 
 
