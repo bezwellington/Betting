@@ -524,6 +524,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="diceImage" destination="dax-tU-kpN" id="Bnj-wB-2Zo"/>
+                        <outlet property="rollButton" destination="aU7-m9-q8H" id="OOK-bv-pjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSL-Kg-qCM" userLabel="First Responder" sceneMemberID="firstResponder"/>

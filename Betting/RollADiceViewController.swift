@@ -11,6 +11,7 @@ import UIKit
 class RollADiceViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
+    @IBOutlet weak var rollButton: UIButton!
     
     
     @IBAction func closeButton(sender: AnyObject) {
@@ -28,11 +29,24 @@ class RollADiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            rollButton(rollButton)
+            print("SHAKEN!!!")
+        }
+    }
 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
 
     
     @IBAction func rollButton(sender: AnyObject) {
