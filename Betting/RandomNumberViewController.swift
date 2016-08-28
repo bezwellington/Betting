@@ -52,6 +52,9 @@ class RandomNumberViewController: UIViewController {
     @IBOutlet weak var startNumberField: UITextField!
     @IBOutlet weak var endNumberField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    
+    var timer1 = NSTimer()
+    var timer2 = NSTimer()
 
 
     override func viewDidLoad() {
@@ -114,12 +117,26 @@ class RandomNumberViewController: UIViewController {
 
         } else {
             
-            resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
+            
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+            
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: Selector("stopCounter"), userInfo: nil, repeats: true)
+            
             self.setRandomBackgroundColor()
         }
         
     }
 
+    func updateCounter() {
+        resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
+        print("to aqui!!!")
+    }
+    
+    func stopCounter() {
+        timer1.invalidate()
+        timer2.invalidate()
+        print("parei!!!")
+    }
     
     // dismiss keyboard quando clica fora
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
