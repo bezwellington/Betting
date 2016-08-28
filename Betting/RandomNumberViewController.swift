@@ -8,6 +8,16 @@
 
 import UIKit
 
+let color1 = UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0) //red
+let color2 = UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0) //green
+let color3 = UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0) //yellow
+let color4 = UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0) //blue
+let color5 = UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0) //pink
+let color6 = UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0) //purple
+let color7 = UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0) //red
+let color8 = UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
+var colors = [color1, color2,color3,color4,color5,color6,color7,color8 ]
+
 class RandomNumberViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
@@ -18,34 +28,21 @@ class RandomNumberViewController: UIViewController {
     }
 
     
-    var auxRandom = -1
-
+    var lastRandomColor = 0
+    var auxRandomColor = 0
     
     // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
         
-        let colors = [
-            UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0), //red
-            UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0), //green
-            UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0), //yellow
-            UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0), //blue
-            UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0), //pink
-            UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0), //purple
-            UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0), //red
-            UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
-        ]
+        //Vai ser finalizada JAJA!!!!
+        // To garantido que nenhuma cor seja repetida
         
-        var randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        
-        if auxRandom == randomColor {
-            randomColor = Int(arc4random_uniform(UInt32 (colors.count)))
-        } else {
-            self.view.backgroundColor = colors[randomColor]
-            auxRandom = randomColor
-        }
-        
-        print(randomColor) // printa o número do index
-        
+        colors.removeAtIndex(lastRandomColor)
+        var randomColor = randomNumber(0...colors.count-2)
+        self.view.backgroundColor = colors[randomColor]
+        colors.append(colors[lastRandomColor]) // adicionar o que foi excluido
+        lastRandomColor = randomColor
+
     }
     
     
@@ -68,11 +65,9 @@ class RandomNumberViewController: UIViewController {
 
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     // adiciona estilo aos text fields
     func textFieldStyles(textField: UITextField) {
@@ -116,26 +111,26 @@ class RandomNumberViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
 
         } else {
+            // chama a funcao startRandom a cada 0.06 segundo
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: Selector("startRandom"), userInfo: nil, repeats: true)
             
-            
-            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
-            
-            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: Selector("stopCounter"), userInfo: nil, repeats: true)
+            // chama a funcao stopRandom a cada 0.4 segundo
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.4, target:self, selector: Selector("stopRandom"), userInfo: nil, repeats: true)
             
             self.setRandomBackgroundColor()
         }
         
     }
-
-    func updateCounter() {
+    
+    // funcao que anima a label
+    func startRandom() {
         resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
-        print("to aqui!!!")
     }
     
-    func stopCounter() {
+    // funcao que PARA o timer1 e timer2
+    func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
-        print("parei!!!")
     }
     
     // dismiss keyboard quando clica fora
