@@ -10,13 +10,13 @@ import UIKit
 
 class RandomLetterViewController: UIViewController {
     
+    @IBOutlet weak var pushButton: UIButton!
     override func prefersStatusBarHidden() -> Bool { return true }
     
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
     
     var auxRandom = -1
     
@@ -57,16 +57,16 @@ class RandomLetterViewController: UIViewController {
     var firstLetter: Int = 0
     var lastLetter: Int = 0
     
-//    override func canBecomeFirstResponder() -> Bool {
-//        return true
-//    }
-//    
-//    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-//        if motion == .MotionShake {
-//            rollButton(rollButton)
-//            print("SHAKEN!!!")
-//        }
-//    }
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            pushButton(pushButton)
+            print("SHAKEN!!!")
+        }
+    }
 
     
     @IBAction func pushButton(sender: AnyObject) {

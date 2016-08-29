@@ -10,6 +10,8 @@ import UIKit
 
 class RandomWordViewController: UIViewController {
     
+    @IBOutlet weak var pushButton: UIButton!
+    
     override func prefersStatusBarHidden() -> Bool { return true }
     
     
@@ -110,9 +112,18 @@ class RandomWordViewController: UIViewController {
         textField.layer.masksToBounds = true
         
     }
+
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
     
-    
-//MARK: LEMBRAR DE ADICIONAR OS ALERTAS
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            pushButton(pushButton)
+            print("SHAKEN!!!")
+        }
+    }
+
     @IBAction func pushButton(sender: AnyObject) {
         
         if let error = checkTextFieldError() {

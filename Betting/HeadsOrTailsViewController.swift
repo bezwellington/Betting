@@ -11,6 +11,8 @@ import AVFoundation
 
 class HeadsOrTailsViewController: UIViewController {
     
+    @IBOutlet weak var flipButton: UIButton!
+    
     override func prefersStatusBarHidden() -> Bool { return true }
     
     
@@ -33,6 +35,17 @@ class HeadsOrTailsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            flipButton(flipButton)
+            print("SHAKEN!!!")
+        }
     }
     
 

@@ -129,6 +129,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="endNumberField" destination="Deu-As-bdt" id="coM-uL-lJj"/>
+                        <outlet property="pushButton" destination="1uZ-Xb-QJr" id="b67-cJ-pv2"/>
                         <outlet property="resultLabel" destination="p0J-bg-ezi" id="DZ9-vv-g7E"/>
                         <outlet property="startNumberField" destination="T3m-vU-5dd" id="uUb-1u-ei6"/>
                     </connections>
@@ -216,6 +217,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="firstOptionField" destination="n9C-fQ-dzc" id="l3F-QD-III"/>
+                        <outlet property="pushButton" destination="j9U-rB-gry" id="jF8-sN-Nq1"/>
                         <outlet property="resultLabel" destination="Cwf-EW-Uzf" id="NSz-JL-kZc"/>
                         <outlet property="secondOptionField" destination="PCS-KL-UqW" id="qLk-B2-N1R"/>
                     </connections>
@@ -278,6 +280,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="askButton" destination="rB2-uH-GTG" id="7qE-yC-9al"/>
                         <outlet property="resultLabel" destination="ZLC-yO-wlC" id="n5F-z0-xge"/>
                     </connections>
                 </viewController>
@@ -468,6 +471,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="coinImage" destination="4cS-e7-qpp" id="Tfc-sE-WpO"/>
+                        <outlet property="flipButton" destination="ivv-xK-l1g" id="iIY-5l-TQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLq-TI-dg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -630,6 +634,7 @@
                     <connections>
                         <outlet property="firstField" destination="phd-B7-CbL" id="XrY-wC-eGM"/>
                         <outlet property="lastField" destination="GNX-t3-w9g" id="IGb-i4-j26"/>
+                        <outlet property="pushButton" destination="8dV-aP-U91" id="llp-GS-bD3"/>
                         <outlet property="resultLabel" destination="7hk-Bv-gdn" id="mi5-sK-4EA"/>
                     </connections>
                 </viewController>
