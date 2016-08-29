@@ -19,24 +19,20 @@ class YesOrNoViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     let screenSize = UIScreen.mainScreen().bounds
     
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    
     var answerWords: [String] = ["YES!","NO!"]
     var index = 0
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setFontSize()
         
     }
-    
     
     func setFontSize() {
         
@@ -81,11 +77,11 @@ class YesOrNoViewController: UIViewController {
         // changes background color according to result label's text
         switch resultLabel.text! {
         case "YES!":
-            view.backgroundColor = UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0) //green
+            view.backgroundColor = UIColor.greenBet()
         case "NO!":
-            view.backgroundColor = UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0) //red
+            view.backgroundColor = UIColor.red2Bet()
         default:
-            view.backgroundColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.0) //black
+            view.backgroundColor = UIColor.blackBet()
         }
         
         resultLabel.enlargeAnimation()

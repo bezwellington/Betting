@@ -57,22 +57,22 @@ class RollADiceViewController: UIViewController {
         switch descriptionPhoto {
         case "1":
             diceImage.image = UIImage(named: "one")
-            view.backgroundColor = UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0) //red
+            view.backgroundColor = UIColor.redBet()
         case "2":
             diceImage.image = UIImage(named: "two")
-            view.backgroundColor = UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0) //green
+            view.backgroundColor = UIColor.greenBet()
         case "3":
             diceImage.image = UIImage(named: "three")
-            view.backgroundColor = UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0) //yellow
+            view.backgroundColor = UIColor.yellowBet()
         case "4":
             diceImage.image = UIImage(named: "four")
-            view.backgroundColor = UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0) //blue
+            view.backgroundColor = UIColor.blueBet()
         case "5":
             diceImage.image = UIImage(named: "five")
-            view.backgroundColor = UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0) //pink
+            view.backgroundColor = UIColor.pinkBet()
         default:
             diceImage.image = UIImage(named: "six")
-            view.backgroundColor = UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0) //purple
+            view.backgroundColor = UIColor.purpleBet()
         }
         
         diceImage.enlargeAnimation()

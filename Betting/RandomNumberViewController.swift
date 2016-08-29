@@ -8,14 +8,14 @@
 
 import UIKit
 
-let color1 = UIColor(red:0.94, green:0.30, blue:0.41, alpha:1.0) //red
-let color2 = UIColor(red:0.23, green:0.83, blue:0.50, alpha:1.0) //green
-let color3 = UIColor(red:0.99, green:0.85, blue:0.36, alpha:1.0) //yellow
-let color4 = UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0) //blue
-let color5 = UIColor(red:0.97, green:0.46, blue:0.64, alpha:1.0) //pink
-let color6 = UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0) //purple
-let color7 = UIColor(red:1.00, green:0.31, blue:0.31, alpha:1.0) //red
-let color8 = UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0)  //salmon
+let color1 = UIColor.redBet()
+let color2 = UIColor.greenBet()
+let color3 = UIColor.yellowBet()
+let color4 = UIColor.blueBet()
+let color5 = UIColor.pinkBet()
+let color6 = UIColor.purpleBet()
+let color7 = UIColor.red2Bet()
+let color8 = UIColor.salmonBet()
 var colors = [color1, color2,color3,color4,color5,color6,color7,color8 ]
 
 class RandomNumberViewController: UIViewController {
@@ -114,10 +114,10 @@ class RandomNumberViewController: UIViewController {
 
         } else {
             // chama a funcao startRandom a cada 0.06 segundo
-            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: Selector("startRandom"), userInfo: nil, repeats: true)
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
             
             // chama a funcao stopRandom a cada 0.4 segundo
-            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.4, target:self, selector: Selector("stopRandom"), userInfo: nil, repeats: true)
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
             
             self.setRandomBackgroundColor()
         }

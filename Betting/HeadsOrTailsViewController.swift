@@ -60,12 +60,12 @@ class HeadsOrTailsViewController: UIViewController {
         switch descriptionPhoto {
         case "heads":
             coinImage.image = UIImage(named: "heads")
-            view.backgroundColor = UIColor(red:0.29, green:0.75, blue:0.89, alpha:1.0) //blue
+            view.backgroundColor = UIColor.blueBet()
         case "tails":
             coinImage.image = UIImage(named: "tails")
-            view.backgroundColor = UIColor(red:1.00, green:0.42, blue:0.42, alpha:1.0) //orange
+            view.backgroundColor = UIColor.salmonBet()
         default:
-            view.backgroundColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.0) //black
+            view.backgroundColor = UIColor.blackBet()
         }
         
         coinImage.enlargeAnimation()
