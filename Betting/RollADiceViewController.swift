@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RollADiceViewController: UIViewController {
     
@@ -46,13 +47,12 @@ class RollADiceViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
-
-    
     @IBAction func rollButton(sender: AnyObject) {
         
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto =  vWords[index]
+        
+        playSound()
         
         switch descriptionPhoto {
         case "1":
@@ -73,6 +73,24 @@ class RollADiceViewController: UIViewController {
         default:
             diceImage.image = UIImage(named: "six")
             view.backgroundColor = UIColor(red:0.67, green:0.46, blue:0.74, alpha:1.0) //purple
+        }
+        
+        diceImage.enlargeAnimation()
+    }
+    
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        let url = NSBundle.mainBundle().URLForResource("diceSound", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HeadsOrTailsViewController: UIViewController {
     
@@ -40,6 +41,7 @@ class HeadsOrTailsViewController: UIViewController {
         index = randomNumber(0...vWords.count-1)
         let descriptionPhoto = vWords[index]
         
+        playSound()
         
         // changes background color according to photo
         switch descriptionPhoto {
@@ -52,9 +54,27 @@ class HeadsOrTailsViewController: UIViewController {
         default:
             view.backgroundColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.0) //black
         }
-
+        
+        coinImage.enlargeAnimation()
         
     }
+    
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        let url = NSBundle.mainBundle().URLForResource("coinFlip", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
     
     
 }

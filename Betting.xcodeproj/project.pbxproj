@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E48A6851D6E331D00296D4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E48A6841D6E331D00296D4E /* Extensions.swift */; };
+		2EDB21971D73B33400E89B95 /* diceSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2EDB21961D73B33400E89B95 /* diceSound.mp3 */; };
+		2EDB21991D73B52A00E89B95 /* coinFlip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2EDB21981D73B52A00E89B95 /* coinFlip.wav */; };
 		404477BE1D62BD040088DF72 /* RandomWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404477BD1D62BD040088DF72 /* RandomWordViewController.swift */; };
 		4049E7301D62682600B7DD77 /* RandomNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */; };
 		4049E7321D62683C00B7DD77 /* RollADiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049E7311D62683C00B7DD77 /* RollADiceViewController.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		2E48A6841D6E331D00296D4E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2EDB21961D73B33400E89B95 /* diceSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = diceSound.mp3; path = "../../../../Music/iTunes/iTunes Media/Music/Joanne/Unknown Album/diceSound.mp3"; sourceTree = "<group>"; };
+		2EDB21981D73B52A00E89B95 /* coinFlip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = coinFlip.wav; path = ../../../../Downloads/coinFlip.wav; sourceTree = "<group>"; };
 		404477BD1D62BD040088DF72 /* RandomWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomWordViewController.swift; sourceTree = "<group>"; };
 		4049E72F1D62682600B7DD77 /* RandomNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberViewController.swift; sourceTree = "<group>"; };
 		4049E7311D62683C00B7DD77 /* RollADiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollADiceViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EDB21931D73B2DF00E89B95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2EDB21981D73B52A00E89B95 /* coinFlip.wav */,
+				2EDB21961D73B33400E89B95 /* diceSound.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4049E7341D626EBE00B7DD77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 		4049E7361D626ED000B7DD77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2EDB21931D73B2DF00E89B95 /* Resources */,
 				40AEFB3F1D6258370056476C /* Info.plist */,
 				40AEFB3A1D6258370056476C /* Assets.xcassets */,
 				40AEFB331D6258370056476C /* AppDelegate.swift */,
@@ -191,8 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3E33331D675A2800DD258A /* GothamRnd-Bold.otf in Resources */,
+				2EDB21971D73B33400E89B95 /* diceSound.mp3 in Resources */,
 				CE3E33341D675A2800DD258A /* GothamRnd-Book.otf in Resources */,
 				CE3E33351D675A2800DD258A /* GothamRnd-Light.otf in Resources */,
+				2EDB21991D73B52A00E89B95 /* coinFlip.wav in Resources */,
 				CE3E33361D675A2800DD258A /* GothamRnd-Medium.otf in Resources */,
 				40AEFB3E1D6258370056476C /* LaunchScreen.storyboard in Resources */,
 				40AEFB3B1D6258370056476C /* Assets.xcassets in Resources */,
