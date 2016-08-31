@@ -53,6 +53,9 @@ class RandomLetterViewController: UIViewController {
     @IBOutlet weak var firstField: UITextField!
     @IBOutlet weak var lastField: UITextField!
     
+    var timer1 = NSTimer()
+    var timer2 = NSTimer()
+    
     
     var firstLetter: Int = 0
     var lastLetter: Int = 0
@@ -78,16 +81,31 @@ class RandomLetterViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-            print("Sort Letter")
-            //let range = lastLett - firstLett
-            let asciiCode = randomNumber(firstLetter...lastLetter)
-            var str = ""
-            str.append(Character(UnicodeScalar(asciiCode)))
-            resultLabel.text = str
+            // chama a funcao startRandom a cada 0.06 segundo
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
+            
+            // chama a funcao stopRandom a cada 0.4 segundo
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
         }
         
         self.setRandomBackgroundColor()
 
+    }
+    
+    // funcao que anima a label
+    func startRandom() {
+        print("Sort Letter")
+        //let range = lastLett - firstLett
+        let asciiCode = randomNumber(firstLetter...lastLetter)
+        var str = ""
+        str.append(Character(UnicodeScalar(asciiCode)))
+        resultLabel.text = str
+    }
+    
+    // funcao que PARA o timer1 e timer2
+    func stopRandom() {
+        timer1.invalidate()
+        timer2.invalidate()
     }
     
     

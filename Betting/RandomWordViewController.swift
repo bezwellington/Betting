@@ -21,9 +21,9 @@ class RandomWordViewController: UIViewController {
     
     
     let screenSize = UIScreen.mainScreen().bounds
-    
-    
     var auxRandom = -1
+    var timer1 = NSTimer()
+    var timer2 = NSTimer()
     
     
     // muda as cores do background aleatoriamente
@@ -134,14 +134,29 @@ class RandomWordViewController: UIViewController {
             vWords = [firstOptionField.text!, secondOptionField.text!]
             
             if (vWords.count > 1) {
-                index = randomNumber(0...vWords.count-1)
-                print (vWords[index])
-                resultLabel.text = vWords[index]
+                // chama a funcao startRandom a cada 0.06 segundo
+                timer1 = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
+                
+                // chama a funcao stopRandom a cada 0.4 segundo
+                timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
             }
         
             self.setRandomBackgroundColor()
         }
         
+    }
+    
+    // funcao que anima a label
+    func startRandom() {
+        index = randomNumber(0...vWords.count-1)
+        print (vWords[index])
+        resultLabel.text = vWords[index]
+    }
+    
+    // funcao que PARA o timer1 e timer2
+    func stopRandom() {
+        timer1.invalidate()
+        timer2.invalidate()
     }
     
     

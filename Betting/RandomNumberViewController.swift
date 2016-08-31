@@ -8,16 +8,6 @@
 
 import UIKit
 
-let color1 = UIColor.redBet()
-let color2 = UIColor.greenBet()
-let color3 = UIColor.yellowBet()
-let color4 = UIColor.blueBet()
-let color5 = UIColor.pinkBet()
-let color6 = UIColor.purpleBet()
-let color7 = UIColor.red2Bet()
-let color8 = UIColor.salmonBet()
-var colors = [color1, color2,color3,color4,color5,color6,color7,color8 ]
-
 class RandomNumberViewController: UIViewController {
     
     @IBOutlet weak var pushButton: UIButton!
@@ -29,22 +19,42 @@ class RandomNumberViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
+    var auxRandom = -1
+    var newRandomColor = 0
     var lastRandomColor = 0
-    var auxRandomColor = 0
+    var colors = [
+        UIColor.redBet(),
+        UIColor.greenBet(),
+        UIColor.yellowBet(),
+        UIColor.blueBet(),
+        UIColor.pinkBet(),
+        UIColor.purpleBet(),
+        UIColor.red2Bet(),
+        UIColor.salmonBet()
+    ]
+
     
     // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
-        
-        //Vai ser finalizada JAJA!!!!
+/*
         // To garantido que nenhuma cor seja repetida
-        
-        colors.removeAtIndex(lastRandomColor)
+        colors.removeAtIndex(newRandomColor)
         var randomColor = randomNumber(0...colors.count-2)
         self.view.backgroundColor = colors[randomColor]
+        lastRandomColor = newRandomColor
+        newRandomColor = randomColor
         colors.append(colors[lastRandomColor]) // adicionar o que foi excluido
-        lastRandomColor = randomColor
-
+ */
+        var randomColor = randomNumber(0...colors.count-1)
+        
+        if auxRandom == randomColor {
+            var randomColor = randomNumber(0...colors.count-1)
+            self.view.backgroundColor = colors[randomColor]
+            auxRandom = randomColor
+        } else {
+            self.view.backgroundColor = colors[randomColor]
+            auxRandom = randomColor
+        }
     }
     
     
