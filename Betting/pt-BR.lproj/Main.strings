@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "High"; ObjectID = "6eM-Pj-uPu"; */
+"6eM-Pj-uPu.text" = "High";
+
+/* Class = "UITextField"; text = "100"; ObjectID = "Deu-As-bdt"; */
+"Deu-As-bdt.text" = "100";
+
+/* Class = "UILabel"; text = "Low"; ObjectID = "Fhr-at-XtA"; */
+"Fhr-at-XtA.text" = "Low";
+
+/* Class = "UITextField"; text = "Z"; ObjectID = "GNX-t3-w9g"; */
+"GNX-t3-w9g.text" = "Z";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "IpU-b4-rcr"; */
+"IpU-b4-rcr.text" = "De";
+
+/* Class = "UITextField"; text = "Second Option"; ObjectID = "PCS-KL-UqW"; */
+"PCS-KL-UqW.text" = "Segunda Opção";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "T3m-vU-5dd"; */
+"T3m-vU-5dd.text" = "0";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "n3V-4g-fDv"; */
+"n3V-4g-fDv.text" = "Até";
+
+/* Class = "UITextField"; text = "First Option"; ObjectID = "n9C-fQ-dzc"; */
+"n9C-fQ-dzc.text" = "Primeira Opção";
+
+/* Class = "UITextField"; text = "A"; ObjectID = "phd-B7-CbL"; */
+"phd-B7-CbL.text" = "A";
