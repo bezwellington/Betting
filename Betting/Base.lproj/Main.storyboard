@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3J0-eI-1x2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3J0-eI-1x2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -74,9 +74,13 @@
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZs-ye-HOZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dv-97-zqR" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dv-97-zqR" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="QZc-w7-lfG"/>
+                                    <constraint firstAttribute="height" constant="45" id="pLh-pV-Q2f"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGn-lV-utg"/>
                                 </connections>
@@ -111,11 +115,11 @@
                             <constraint firstItem="6eM-Pj-uPu" firstAttribute="bottom" secondItem="Fhr-at-XtA" secondAttribute="bottom" id="UJ1-KC-Pg6"/>
                             <constraint firstItem="Deu-As-bdt" firstAttribute="bottom" secondItem="T3m-vU-5dd" secondAttribute="bottom" id="WBm-KI-xCQ"/>
                             <constraint firstItem="p0J-bg-ezi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aNQ-mQ-L7e"/>
-                            <constraint firstAttribute="trailing" secondItem="9dv-97-zqR" secondAttribute="trailing" constant="25" id="bIx-KF-kQB"/>
+                            <constraint firstAttribute="trailing" secondItem="9dv-97-zqR" secondAttribute="trailing" constant="15" id="bIx-KF-kQB"/>
                             <constraint firstItem="T3m-vU-5dd" firstAttribute="top" secondItem="Fhr-at-XtA" secondAttribute="bottom" constant="18" id="bLu-4c-wwr"/>
                             <constraint firstItem="1uZ-Xb-QJr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c3c-Tg-X8Y"/>
                             <constraint firstItem="Fhr-at-XtA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="72" id="cvr-Oi-yYi"/>
-                            <constraint firstItem="9dv-97-zqR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="lr6-bf-zox"/>
+                            <constraint firstItem="9dv-97-zqR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="15" id="lr6-bf-zox"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1uZ-Xb-QJr" secondAttribute="bottom" constant="101" id="xGa-wf-auo"/>
                             <constraint firstItem="p0J-bg-ezi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-34" id="zaH-UX-mqv"/>
                         </constraints>
@@ -151,7 +155,7 @@
                                     <action selector="pushButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Meb-Ja-k3u"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-fQ-dzc" userLabel="First Option Field">
                                 <rect key="frame" x="38" y="118" width="300" height="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
@@ -160,14 +164,7 @@
                                     <rect key="frame" x="38" y="118" width="300" height="24"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-YK-vBu" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
-                                <connections>
-                                    <action selector="closeButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Bip-YB-WiA"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second Option" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-KL-UqW" userLabel="Second Option Field">
                                 <rect key="frame" x="38" y="160" width="300" height="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="20"/>
@@ -182,12 +179,23 @@
                                 <color key="textColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdU-YK-vBu" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9EF-ef-Kuv"/>
+                                    <constraint firstAttribute="width" constant="45" id="aCO-sQ-BQq"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="Bn1-Gq-Yn0" eventType="touchUpInside" id="Bip-YB-WiA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HdU-YK-vBu" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="25" id="24h-6d-6oj"/>
+                            <constraint firstItem="HdU-YK-vBu" firstAttribute="top" secondItem="dzU-ll-3ga" secondAttribute="top" constant="15" id="24h-6d-6oj"/>
                             <constraint firstItem="n9C-fQ-dzc" firstAttribute="leading" secondItem="dzU-ll-3ga" secondAttribute="leading" constant="38" id="2aS-nL-DGd"/>
-                            <constraint firstAttribute="trailing" secondItem="HdU-YK-vBu" secondAttribute="trailing" constant="25" id="7md-Uz-N02"/>
+                            <constraint firstAttribute="trailing" secondItem="HdU-YK-vBu" secondAttribute="trailing" constant="15" id="7md-Uz-N02"/>
                             <constraint firstItem="PCS-KL-UqW" firstAttribute="width" secondItem="n9C-fQ-dzc" secondAttribute="width" id="GYN-rP-mrI"/>
                             <constraint firstItem="4YE-dq-qoe" firstAttribute="top" secondItem="j9U-rB-gry" secondAttribute="bottom" constant="101" id="Mrj-au-mkG"/>
                             <constraint firstItem="j9U-rB-gry" firstAttribute="width" secondItem="dzU-ll-3ga" secondAttribute="width" multiplier="0.34" id="N3j-mb-2TO"/>
@@ -233,30 +241,34 @@
                                     <action selector="askButton:" destination="TQ9-qh-38u" eventType="touchUpInside" id="Y9W-el-aW1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-Nl-r3D" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
-                                <connections>
-                                    <action selector="closeButton:" destination="TQ9-qh-38u" eventType="touchUpInside" id="FBB-jI-4ig"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLC-yO-wlC">
                                 <rect key="frame" x="103" y="142" width="171" height="70"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-Nl-r3D" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4BH-re-SUb"/>
+                                    <constraint firstAttribute="width" constant="45" id="dUb-sg-BFb"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="TQ9-qh-38u" eventType="touchUpInside" id="FBB-jI-4ig"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kuR-Nl-r3D" secondAttribute="trailing" constant="25" id="9AH-1l-k8x"/>
+                            <constraint firstAttribute="trailing" secondItem="kuR-Nl-r3D" secondAttribute="trailing" constant="15" id="9AH-1l-k8x"/>
                             <constraint firstItem="rB2-uH-GTG" firstAttribute="height" secondItem="dyv-wo-u5p" secondAttribute="height" multiplier="0.194" id="9sm-GM-nw8"/>
                             <constraint firstItem="O58-sb-0o0" firstAttribute="top" secondItem="rB2-uH-GTG" secondAttribute="bottom" constant="101" id="BgM-XO-hB8"/>
                             <constraint firstItem="rB2-uH-GTG" firstAttribute="centerX" secondItem="dyv-wo-u5p" secondAttribute="centerX" id="L8k-Xr-QYa"/>
                             <constraint firstItem="ZLC-yO-wlC" firstAttribute="leading" secondItem="dyv-wo-u5p" secondAttribute="leading" constant="103" id="Zje-Ub-f3u"/>
                             <constraint firstItem="rB2-uH-GTG" firstAttribute="width" secondItem="dyv-wo-u5p" secondAttribute="width" multiplier="0.34" id="bFS-wN-6kW"/>
                             <constraint firstItem="ZLC-yO-wlC" firstAttribute="top" secondItem="oa4-8R-LkP" secondAttribute="bottom" constant="122" id="ulo-xn-bPH"/>
-                            <constraint firstItem="kuR-Nl-r3D" firstAttribute="top" secondItem="dyv-wo-u5p" secondAttribute="top" constant="25" id="yJp-hY-jYJ"/>
+                            <constraint firstItem="kuR-Nl-r3D" firstAttribute="top" secondItem="dyv-wo-u5p" secondAttribute="top" constant="15" id="yJp-hY-jYJ"/>
                             <constraint firstAttribute="trailing" secondItem="ZLC-yO-wlC" secondAttribute="trailing" constant="101" id="zdY-MD-0tj"/>
                         </constraints>
                     </view>
@@ -422,9 +434,13 @@
                                     <action selector="flipButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="fU0-Oi-hcb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrS-gK-BrW" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrS-gK-BrW" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Ral-jk-aTn"/>
+                                    <constraint firstAttribute="width" constant="45" id="oRx-vD-rCa"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="closeButton:" destination="yQM-1e-Xjn" eventType="touchUpInside" id="ZMs-1a-Kdf"/>
                                 </connections>
@@ -432,13 +448,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="jrS-gK-BrW" firstAttribute="top" secondItem="OcG-ch-bcn" secondAttribute="top" constant="25" id="9Kv-WR-xeJ"/>
+                            <constraint firstItem="jrS-gK-BrW" firstAttribute="top" secondItem="OcG-ch-bcn" secondAttribute="top" constant="15" id="9Kv-WR-xeJ"/>
                             <constraint firstItem="4cS-e7-qpp" firstAttribute="top" secondItem="0zV-YK-9uG" secondAttribute="bottom" constant="114" id="ApT-IH-bFh"/>
                             <constraint firstItem="4cS-e7-qpp" firstAttribute="height" secondItem="OcG-ch-bcn" secondAttribute="height" multiplier="0.3" id="CIv-fa-W4R"/>
                             <constraint firstItem="ivv-xK-l1g" firstAttribute="width" secondItem="OcG-ch-bcn" secondAttribute="width" multiplier="0.34" id="Hkx-j6-O4a"/>
                             <constraint firstItem="4cS-e7-qpp" firstAttribute="width" secondItem="OcG-ch-bcn" secondAttribute="width" multiplier="0.533" id="JCB-1j-iH1"/>
                             <constraint firstItem="DJy-7b-dfa" firstAttribute="top" secondItem="ivv-xK-l1g" secondAttribute="bottom" constant="101" id="WXy-UZ-wjf"/>
-                            <constraint firstAttribute="trailing" secondItem="jrS-gK-BrW" secondAttribute="trailing" constant="25" id="l0P-1T-VDm"/>
+                            <constraint firstAttribute="trailing" secondItem="jrS-gK-BrW" secondAttribute="trailing" constant="15" id="l0P-1T-VDm"/>
                             <constraint firstItem="ivv-xK-l1g" firstAttribute="height" secondItem="OcG-ch-bcn" secondAttribute="height" multiplier="0.194" id="oER-sf-o2t"/>
                             <constraint firstItem="ivv-xK-l1g" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="tYs-sw-lyB"/>
                             <constraint firstItem="4cS-e7-qpp" firstAttribute="centerX" secondItem="OcG-ch-bcn" secondAttribute="centerX" id="ykg-7G-CNh"/>
@@ -476,9 +492,13 @@
                                     <action selector="rollButton:" destination="Vhe-fQ-4AM" eventType="touchUpInside" id="5nk-1k-kzu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoB-kx-W7K" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoB-kx-W7K" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="YaT-oh-rG9"/>
+                                    <constraint firstAttribute="width" constant="45" id="ioh-WR-kUi"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="closeButton:" destination="Vhe-fQ-4AM" eventType="touchUpInside" id="6um-qw-to4"/>
                                 </connections>
@@ -487,12 +507,12 @@
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aU7-m9-q8H" firstAttribute="centerX" secondItem="hfi-xT-Q0x" secondAttribute="centerX" id="1Ui-hV-kfp"/>
-                            <constraint firstAttribute="trailing" secondItem="yoB-kx-W7K" secondAttribute="trailing" constant="25" id="25X-su-SPD"/>
+                            <constraint firstAttribute="trailing" secondItem="yoB-kx-W7K" secondAttribute="trailing" constant="15" id="25X-su-SPD"/>
                             <constraint firstItem="dax-tU-kpN" firstAttribute="width" secondItem="hfi-xT-Q0x" secondAttribute="width" multiplier="0.4" id="2M8-lg-vjt"/>
                             <constraint firstItem="cne-3n-7a4" firstAttribute="top" secondItem="aU7-m9-q8H" secondAttribute="bottom" constant="101" id="AX8-iS-eDe"/>
                             <constraint firstItem="aU7-m9-q8H" firstAttribute="width" secondItem="hfi-xT-Q0x" secondAttribute="width" multiplier="0.34" id="Cur-hC-SuT"/>
                             <constraint firstItem="aU7-m9-q8H" firstAttribute="height" secondItem="hfi-xT-Q0x" secondAttribute="height" multiplier="0.194" id="Y0w-wJ-7Q9"/>
-                            <constraint firstItem="yoB-kx-W7K" firstAttribute="top" secondItem="hfi-xT-Q0x" secondAttribute="top" constant="25" id="cRa-pZ-F6f"/>
+                            <constraint firstItem="yoB-kx-W7K" firstAttribute="top" secondItem="hfi-xT-Q0x" secondAttribute="top" constant="15" id="cRa-pZ-F6f"/>
                             <constraint firstItem="dax-tU-kpN" firstAttribute="height" secondItem="hfi-xT-Q0x" secondAttribute="height" multiplier="0.225" id="iY5-tP-RwV"/>
                             <constraint firstItem="dax-tU-kpN" firstAttribute="centerX" secondItem="hfi-xT-Q0x" secondAttribute="centerX" id="km4-OY-mzs"/>
                             <constraint firstItem="dax-tU-kpN" firstAttribute="top" secondItem="xMb-Dt-ODa" secondAttribute="bottom" constant="114" id="yFE-I4-bSN"/>
@@ -520,13 +540,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-aB-YIw" userLabel="Close Button">
-                                <rect key="frame" x="326" y="25" width="24" height="24"/>
-                                <state key="normal" backgroundImage="close"/>
-                                <connections>
-                                    <action selector="closeButton:" destination="k66-8y-Xop" eventType="touchUpInside" id="0vv-yE-4Sy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-aP-U91" userLabel="Push Button">
                                 <rect key="frame" x="122" y="436" width="130" height="130"/>
                                 <state key="normal" image="push"/>
@@ -576,13 +589,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-aB-YIw" userLabel="Close Button">
+                                <rect key="frame" x="315" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="REy-Kn-zB6"/>
+                                    <constraint firstAttribute="width" constant="45" id="biS-jx-akW"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButton:" destination="k66-8y-Xop" eventType="touchUpInside" id="0vv-yE-4Sy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="n3V-4g-fDv" firstAttribute="centerX" secondItem="GNX-t3-w9g" secondAttribute="centerX" id="8fJ-H0-nLi"/>
                             <constraint firstItem="7hk-Bv-gdn" firstAttribute="centerY" secondItem="JSc-6N-tnb" secondAttribute="centerY" constant="-34" id="9NP-C9-eiS"/>
                             <constraint firstAttribute="trailing" secondItem="n3V-4g-fDv" secondAttribute="trailing" constant="72" id="EVh-ds-8aX"/>
-                            <constraint firstAttribute="trailing" secondItem="KPe-aB-YIw" secondAttribute="trailing" constant="25" id="GpU-Ra-9O8"/>
+                            <constraint firstAttribute="trailing" secondItem="KPe-aB-YIw" secondAttribute="trailing" constant="15" id="GpU-Ra-9O8"/>
                             <constraint firstItem="phd-B7-CbL" firstAttribute="centerX" secondItem="IpU-b4-rcr" secondAttribute="centerX" id="HIl-Pz-9tO"/>
                             <constraint firstItem="IpU-b4-rcr" firstAttribute="top" secondItem="JSc-6N-tnb" secondAttribute="top" constant="80" id="HeM-Le-vrJ"/>
                             <constraint firstItem="7hk-Bv-gdn" firstAttribute="centerX" secondItem="JSc-6N-tnb" secondAttribute="centerX" id="I5r-yp-3lm"/>
@@ -591,7 +615,7 @@
                             <constraint firstItem="8dV-aP-U91" firstAttribute="centerX" secondItem="JSc-6N-tnb" secondAttribute="centerX" id="Y9N-Lj-Sc0"/>
                             <constraint firstItem="oSV-me-nLb" firstAttribute="top" secondItem="8dV-aP-U91" secondAttribute="bottom" constant="101" id="bjg-lv-QkI"/>
                             <constraint firstItem="8dV-aP-U91" firstAttribute="height" secondItem="JSc-6N-tnb" secondAttribute="height" multiplier="0.194" id="f5Y-dP-wIb"/>
-                            <constraint firstItem="KPe-aB-YIw" firstAttribute="top" secondItem="JSc-6N-tnb" secondAttribute="top" constant="25" id="h1f-F7-bmS"/>
+                            <constraint firstItem="KPe-aB-YIw" firstAttribute="top" secondItem="JSc-6N-tnb" secondAttribute="top" constant="15" id="h1f-F7-bmS"/>
                             <constraint firstItem="phd-B7-CbL" firstAttribute="top" secondItem="IpU-b4-rcr" secondAttribute="bottom" constant="18" id="hGY-3i-aGe"/>
                             <constraint firstItem="GNX-t3-w9g" firstAttribute="bottom" secondItem="phd-B7-CbL" secondAttribute="bottom" id="z1u-pN-Ktx"/>
                             <constraint firstItem="n3V-4g-fDv" firstAttribute="bottom" secondItem="IpU-b4-rcr" secondAttribute="bottom" id="zHH-OC-UC7"/>

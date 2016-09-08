@@ -133,13 +133,16 @@ class RandomWordViewController: UIViewController {
             
             vWords = [firstOptionField.text!, secondOptionField.text!]
             
-            if (vWords.count > 1) {
-                // chama a funcao startRandom a cada 0.06 segundo
-                timer1 = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
-                
-                // chama a funcao stopRandom a cada 0.4 segundo
-                timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
-            }
+//            if (vWords.count > 1) {
+//                // chama a funcao startRandom a cada 0.06 segundo
+//                timer1 = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
+//                
+//                // chama a funcao stopRandom a cada 0.4 segundo
+//                timer2 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
+//            }
+            
+            startRandom()
+            resultLabel.enlargeAnimation()
         
             self.setRandomBackgroundColor()
         }
