@@ -137,12 +137,14 @@ class RandomNumberViewController: UIViewController {
     // funcao que anima a label
     func startRandom() {
         resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
+        pushButton.enabled = false
     }
     
     // funcao que PARA o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
+        pushButton.enabled = true
     }
     
     // dismiss keyboard quando clica fora

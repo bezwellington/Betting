@@ -151,12 +151,14 @@ class RandomWordViewController: UIViewController {
         index = randomNumber(0...vWords.count-1)
         print (vWords[index])
         resultLabel.text = vWords[index]
+        pushButton.enabled = false
     }
     
     // funcao que PARA o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
+        pushButton.enabled = true
     }
     
     
