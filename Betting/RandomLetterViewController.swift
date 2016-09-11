@@ -100,12 +100,14 @@ class RandomLetterViewController: UIViewController {
         var str = ""
         str.append(Character(UnicodeScalar(asciiCode)))
         resultLabel.text = str
+        pushButton.enabled = false
     }
     
     // funcao que PARA o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
+        pushButton.enabled = true
     }
     
     

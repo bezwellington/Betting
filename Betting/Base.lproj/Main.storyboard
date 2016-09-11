@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="82" y="121.5" width="18" height="30"/>
+                                    <rect key="frame" x="82" y="121" width="18" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0J-bg-ezi" userLabel="Result Label">
@@ -91,7 +91,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="261.5" y="80" width="41.5" height="23.5"/>
+                                    <rect key="frame" x="261" y="80" width="41.5" height="23.5"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Deu-As-bdt" userLabel="Start Number Field">
@@ -100,7 +100,7 @@
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="259.5" y="121.5" width="46" height="30"/>
+                                    <rect key="frame" x="259" y="121" width="46" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -571,7 +571,7 @@
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="85" y="121.5" width="21" height="30"/>
+                                    <rect key="frame" x="85" y="121" width="21" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Z" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNX-t3-w9g">
@@ -580,7 +580,7 @@
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="282.5" y="121.5" width="20" height="30"/>
+                                    <rect key="frame" x="282" y="121" width="20" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hk-Bv-gdn" userLabel="Result Label">
