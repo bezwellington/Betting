@@ -11,12 +11,13 @@ import UIKit
 class RandomLetterViewController: UIViewController {
     
     @IBOutlet weak var pushButton: UIButton!
-    override func prefersStatusBarHidden() -> Bool { return true }
     
+    override func prefersStatusBarHidden() -> Bool { return true }
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     var auxRandom = -1
     
@@ -44,7 +45,7 @@ class RandomLetterViewController: UIViewController {
             auxRandom = randomColor
         }
         
-        print(randomColor) // printa o número do index
+        print(randomColor) // printa o numero do index
         
     }
 
@@ -92,10 +93,10 @@ class RandomLetterViewController: UIViewController {
 
     }
     
-    // funcao que anima a label
+    // func que anima a label
     func startRandom() {
         print("Sort Letter")
-        //let range = lastLett - firstLett
+        //let range = lastLetter - firstLetter
         let asciiCode = randomNumber(firstLetter...lastLetter)
         var str = ""
         str.append(Character(UnicodeScalar(asciiCode)))
@@ -103,7 +104,7 @@ class RandomLetterViewController: UIViewController {
         pushButton.enabled = false
     }
     
-    // funcao que PARA o timer1 e timer2
+    // func que para o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
@@ -125,14 +126,14 @@ class RandomLetterViewController: UIViewController {
         //intervalo do alfabeto maiusculo na tabela ASCII
         let range: Range<Int> = 65...90
         
-        //retorna erro de caractere que não é letra maiuscula
+        //retorna erro de caractere que nao é letra maiuscula
         if !(range.contains(firstLetter) && range.contains(lastLetter)){
             return "Please insert only letters."
         }
             
         //retorna erro de ordem errada de letras
         else if (firstLetter > lastLetter) {
-            return "Please insert in alphabetical order"
+            return "Please insert in alphabetical order."
         }
         
         return nil

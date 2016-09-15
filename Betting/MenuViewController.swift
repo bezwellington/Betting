@@ -11,7 +11,6 @@ import UIKit
 class MenuViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle { return .LightContent }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +20,5 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
 
 }

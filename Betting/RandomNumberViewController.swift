@@ -14,11 +14,11 @@ class RandomNumberViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
-    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    
     var auxRandom = -1
     var newRandomColor = 0
     var lastRandomColor = 0
@@ -37,7 +37,7 @@ class RandomNumberViewController: UIViewController {
     // muda as cores do background aleatoriamente
     func setRandomBackgroundColor() {
 /*
-        // To garantido que nenhuma cor seja repetida
+        // garantindo que nenhuma cor seja repetida
         colors.removeAtIndex(newRandomColor)
         var randomColor = randomNumber(0...colors.count-2)
         self.view.backgroundColor = colors[randomColor]
@@ -45,16 +45,17 @@ class RandomNumberViewController: UIViewController {
         newRandomColor = randomColor
         colors.append(colors[lastRandomColor]) // adicionar o que foi excluido
  */
-        var randomColor = randomNumber(0...colors.count-1)
+        let randomColor = randomNumber(0...colors.count-1)
         
         if auxRandom == randomColor {
-            var randomColor = randomNumber(0...colors.count-1)
+            let randomColor = randomNumber(0...colors.count-1)
             self.view.backgroundColor = colors[randomColor]
             auxRandom = randomColor
         } else {
             self.view.backgroundColor = colors[randomColor]
             auxRandom = randomColor
         }
+        
     }
     
     
@@ -77,9 +78,11 @@ class RandomNumberViewController: UIViewController {
 
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     // adiciona estilo aos text fields
     func textFieldStyles(textField: UITextField) {
@@ -97,7 +100,7 @@ class RandomNumberViewController: UIViewController {
     }
 
     
-    // verificação de erros
+    // verifica de erros
     func checkTextFieldError() -> String? {
         
         if startNumberField.text == "" || endNumberField.text == "" {
@@ -123,10 +126,10 @@ class RandomNumberViewController: UIViewController {
             self.presentViewController(alert, animated: true, completion: nil)
 
         } else {
-            // chama a funcao startRandom a cada 0.06 segundo
+            // chama a func startRandom a cada 0.06 segundo
             timer1 = NSTimer.scheduledTimerWithTimeInterval(0.06, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
             
-            // chama a funcao stopRandom a cada 0.4 segundo
+            // chama a func stopRandom a cada 0.4 segundo
             timer2 = NSTimer.scheduledTimerWithTimeInterval(0.6, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
             
             self.setRandomBackgroundColor()
@@ -134,13 +137,14 @@ class RandomNumberViewController: UIViewController {
         
     }
     
-    // funcao que anima a label
+    
+    // func que anima a label
     func startRandom() {
         resultLabel.text = String(randomNumber(Int(startNumberField.text!)!...Int(endNumberField.text!)!))
         pushButton.enabled = false
     }
     
-    // funcao que PARA o timer1 e timer2
+    // func que para o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()

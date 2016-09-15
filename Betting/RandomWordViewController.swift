@@ -14,7 +14,6 @@ class RandomWordViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
-    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -49,7 +48,7 @@ class RandomWordViewController: UIViewController {
             auxRandom = randomColor
         }
         
-        print(randomColor) // printa o número do index
+        print(randomColor) // printa o numero do index
         
     }
     
@@ -132,24 +131,26 @@ class RandomWordViewController: UIViewController {
         } else {
             
             vWords = [firstOptionField.text!, secondOptionField.text!]
-            
-//            if (vWords.count > 1) {
-//                // chama a funcao startRandom a cada 0.06 segundo
-//                timer1 = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
-//                
-//                // chama a funcao stopRandom a cada 0.4 segundo
-//                timer2 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
-//            }
-            
+
+/*
+            if (vWords.count > 1) {
+                // chama a func startRandom a cada 0.06 segundo
+                timer1 = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: #selector(RandomNumberViewController.startRandom), userInfo: nil, repeats: true)
+                
+                // chama a func stopRandom a cada 0.4 segundo
+                timer2 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(RandomNumberViewController.stopRandom), userInfo: nil, repeats: true)
+            }
+*/
             startRandom()
             resultLabel.enlargeAnimation()
-        
             self.setRandomBackgroundColor()
+            
         }
         
     }
     
-    // funcao que anima a label
+    
+    // func que anima a label
     func startRandom() {
         index = randomNumber(0...vWords.count-1)
         print (vWords[index])
@@ -157,7 +158,7 @@ class RandomWordViewController: UIViewController {
         pushButton.enabled = false
     }
     
-    // funcao que PARA o timer1 e timer2
+    // func que PARA o timer1 e timer2
     func stopRandom() {
         timer1.invalidate()
         timer2.invalidate()
@@ -168,7 +169,7 @@ class RandomWordViewController: UIViewController {
     func checkTextFieldError() -> String? {
         
         if firstOptionField.text == "" || secondOptionField.text == "" {
-            return "Don't forget to insert the word!"
+            return "Don't forget to insert the words!"
         }
         
         return nil

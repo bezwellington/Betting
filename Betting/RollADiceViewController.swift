@@ -12,14 +12,13 @@ import AVFoundation
 class RollADiceViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
-    @IBOutlet weak var rollButton: UIButton!
-    
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
+    @IBOutlet weak var rollButton: UIButton!
     @IBOutlet weak var diceImage: UIImageView!
     
     
@@ -31,9 +30,11 @@ class RollADiceViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
+    
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
@@ -46,6 +47,7 @@ class RollADiceViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @IBAction func rollButton(sender: AnyObject) {
         
@@ -78,7 +80,9 @@ class RollADiceViewController: UIViewController {
         diceImage.enlargeAnimation()
     }
     
+    
     var player: AVAudioPlayer?
+    
     
     func playSound() {
         let url = NSBundle.mainBundle().URLForResource("diceSound", withExtension: "mp3")!

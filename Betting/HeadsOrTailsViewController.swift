@@ -15,7 +15,6 @@ class HeadsOrTailsViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
-    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -37,9 +36,11 @@ class HeadsOrTailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
+    
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
@@ -72,7 +73,9 @@ class HeadsOrTailsViewController: UIViewController {
         
     }
     
+    
     var player: AVAudioPlayer?
+    
     
     func playSound() {
         let url = NSBundle.mainBundle().URLForResource("coinFlip", withExtension: "wav")!
@@ -88,6 +91,6 @@ class HeadsOrTailsViewController: UIViewController {
         }
     }
     
-    
+
     
 }

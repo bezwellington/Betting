@@ -14,25 +14,28 @@ class YesOrNoViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool { return true }
     
-    
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     let screenSize = UIScreen.mainScreen().bounds
     
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    
     var answerWords: [String] = ["YES!","NO!"]
     var index = 0
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setFontSize()
         
     }
+    
     
     func setFontSize() {
         
@@ -57,9 +60,11 @@ class YesOrNoViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
+    
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
